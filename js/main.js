@@ -292,3 +292,60 @@ window.addEventListener('resize', ()=> {
 });
 
 
+
+// Animate stat numbers and SVG rings when section scrolls into view
+(function(){
+  const stats = document.querySelectorAll('.stat');
+  let done = false;
+
+  function animateStat(statEl) {
+    const target = parseFloat(statEl.getAttribute('data-value') || 0);
+    const suffix = statEl.getAttribute('data-suffix') || '';
+    const valNode = statEl.querySelector('.stat-val');
+    // count-up (longer duration for bigger UI)
+    let current = 0;
+    const duration = 1100; // slightly slower
+    const steps = Math.min(80, Math.ceil(duration / 16));
+    const stepVal = target / steps;
+    let i = 0;
+    const t = setInterval(()=> {
+      i++;
+      current = Math.min(target, +(current + stepVal).toFixed(1));
+      valNode.textContent = (target >= 10 ? Math.round(current) : (+current.toFixed(1)));
+      if(i >= steps) {
+        clearInterval(t);
+        valNode.textContent = (target >= 10 ? Math.round(target) : target);
+      }
+    }, duration / steps);
+
+    // draw ring
+    const ring = statEl.querySelector('.ring');
+    const r = ring.getAttribute('r');
+    const circumference = 2 * Math.PI * r;
+    ring.style.strokeDasharray = circumference;
+    const percent = statEl.getAttribute('data-suffix') === '%' ? Math.min(100, target) : 100;
+    const offset = circumference * (1 - (percent / 100));
+    ring.style.transition = 'stroke-dashoffset 1000ms cubic-bezier(.2,.9,.2,1)';
+    requestAnimationFrame(()=> {
+      ring.style.strokeDashoffset = offset;
+    });
+  }
+
+  function onIntersect(entries) {
+    entries.forEach(entry => {
+      if(entry.isIntersecting && !done) {
+        stats.forEach(s => animateStat(s));
+        done = true;
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(onIntersect, {threshold:0.28});
+  const targetNode = document.querySelector('#shyva-benefits');
+  if(targetNode) observer.observe(targetNode);
+  else {
+    stats.forEach(s => animateStat(s));
+  }
+})();
+
+
