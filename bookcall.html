@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Call</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+      background: #f6f9ff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 8px;
+      font-size: 28px;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    label {
+      font-size: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .input-box {
+      margin-bottom: 22px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccd6e0;
+      font-size: 15px;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    /* Calendar Styling */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(40%) sepia(50%) saturate(800%) hue-rotate(200deg);
+      cursor: pointer;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 16px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      background: #2563eb;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Book a Call</h2>
+    <p>Select your date & time for a free demo call.</p>
+
+    <!-- Full Name -->
+    <div class="input-box">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required />
+    </div>
+
+    <!-- Email -->
+    <div class="input-box">
+      <label>Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+    </div>
+
+    <!-- Phone -->
+    <div class="input-box">
+      <label>Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required />
+    </div>
+
+    <!-- Date Picker -->
+    <div class="input-box">
+      <label>Select Date</label>
+      <input type="date" id="date" required />
+    </div>
+
+    <!-- Time Picker -->
+    <div class="input-box">
+      <label>Select Time</label>
+      <select id="time" required>
+        <option value="" disabled selected>Select a time</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>12:00 PM</option>
+        <option>02:00 PM</option>
+        <option>03:00 PM</option>
+        <option>04:00 PM</option>
+        <option>06:00 PM</option>
+      </select>
+    </div>
+
+    <button class="btn" onclick="submitBooking()">Confirm Booking</button>
+  </div>
+
+  <script>
+    // Limit date picker to today + no past date
+    const dateInput = document.getElementById("date");
+    const today = new Date().toISOString().split("T")[0];
+    dateInput.min = today;
+
+    // Submit Booking Action
+    function submitBooking() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+
+      if (!name || !email || !phone || !date || !time) {
+        alert("Please fill all fields.");
+        return;
+      }
+
+      alert(
+        "Your call has been booked!\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + phone + "\n" +
+        "Date: " + date + "\n" +
+        "Time: " + time
+      );
+    }
+  </script>
+
+</body>
+</html>

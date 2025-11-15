@@ -45,7 +45,7 @@
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="display-6 text-primary m-0"><i class="fas fa-envelope me-3"></i>Mailler</h1>
+                    <h1 class="display-6 text-primary m-0"><i class="fas fa-envelope me-3"></i>shvya-ai</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -248,7 +248,182 @@
         </div>
         <!-- Footer End -->
 
-        
+        <!-- === Live WhatsApp Sales Popup (All-in-one Code with Your Number) === -->
+<style>
+  /* Floating WhatsApp Button */
+  .wa-float {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 64px;
+    height: 64px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform .18s ease;
+  }
+  .wa-float:hover { transform: scale(1.08); }
+  .wa-float img { width:36px; height:36px; }
+
+  /* Ring effect */
+  .wa-ring {
+    position:absolute;
+    width:86px; height:86px; border-radius:50%;
+    right: -11px; bottom: -11px; z-index: -1;
+    pointer-events:none;
+    animation: ringPulse 2.6s infinite ease-out;
+    box-shadow: 0 0 0 6px rgba(37,211,102,.06), 0 0 30px 6px rgba(37,211,102,.04) inset;
+  }
+  @keyframes ringPulse {
+    0% { transform: scale(.7); opacity: .95 }
+    70% { transform: scale(1.6); opacity: 0 }
+    100% { opacity: 0 }
+  }
+
+  /* Popup card */
+  .sales-popup {
+    position: fixed;
+    right: 94px;
+    bottom: 26px;
+    width: 320px;
+    max-width: calc(100% - 140px);
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,248,255,0.98));
+    border-radius: 14px;
+    box-shadow: 0 22px 50px rgba(15,23,42,0.18);
+    padding: 14px;
+    z-index: 9998;
+    transform-origin: bottom right;
+    transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sales-popup.show { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
+  .sales-popup.hide { opacity: 0; transform: translateY(10px) scale(.98); }
+  .sales-popup.anim-in { animation: popIn .36s cubic-bezier(.2,.9,.2,1); }
+
+  @keyframes popIn {
+    0% { transform: translateY(14px) scale(.98); opacity:0; }
+    60% { transform: translateY(-8px) scale(1.01); opacity:1; }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  .sales-popup .head { display:flex; gap:10px; align-items:center; }
+  .sales-popup .avatar {
+    width:44px; height:44px; border-radius:10px;
+    background: linear-gradient(90deg,#fff,#eef6ff);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: inset 0 6px 12px rgba(16,24,40,0.04);
+    font-weight:700; color:#0f172a;
+  }
+  .sales-popup h4 { margin:0; font-size:15px; }
+  .sales-popup p { margin:6px 0 0; font-size:13px; color:#55607a; }
+
+  .sales-popup .ctas { display:flex; gap:8px; margin-top:12px; }
+  .btn {
+    padding:8px 12px; border-radius:10px; border:0;
+    cursor:pointer; font-weight:600; text-decoration:none;
+    font-size:13px; display:inline-flex; align-items:center;
+  }
+  .btn-primary { background:#25D366; color:#fff; }
+  .btn-outline { background:transparent; border:1px solid rgba(15,23,42,0.06); color:#374151; }
+
+  .sales-popup .close {
+    position:absolute; right:10px; top:8px; background:transparent;
+    border:0; cursor:pointer; font-size:14px; color:#6b7280;
+  }
+
+  .sales-popup .meta-note {
+    margin-top:10px; font-size:12px; color:#8b95a8;
+    display:flex; align-items:center; gap:8px;
+  }
+
+  @media (max-width:640px) {
+    .sales-popup { right: 14px; left: 14px; width:auto; bottom: 86px; }
+    .wa-float { right: 14px; bottom: 14px; }
+  }
+</style>
+
+<!-- WhatsApp Floating Button -->
+<a class="wa-float" id="waFloat" href="https://wa.me/916393413211?text=Hi%20I%20want%20to%20know%20more%20about%20your%20product" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png">
+  <div class="wa-ring" id="waRing"></div>
+</a>
+
+<!-- Sales Popup -->
+<div class="sales-popup" id="salesPopup">
+  <button class="close" id="salesClose">✕</button>
+  <div class="head">
+    <div class="avatar">Shvya-Ai</div>
+    <div class="meta">
+      <h4>Live Sales Support</h4>
+      <p>Chat with us or book a demo call.</p>
+    </div>
+  </div>
+
+  <div class="ctas">
+    <a href="https://wa.me/916393413211?text=Hi%20I%20am%20interested%20in%20your%20SaaS%20platform" class="btn btn-primary" id="chatBtn" target="_blank">Chat on WhatsApp</a>
+    <a href="bookcall.html" class="btn btn-outline" id="bookBtn" target="_blank">Book a Demo</a>
+  </div>
+
+  <div class="meta-note">
+    <input type="checkbox" id="dontShow"> <span>Don't show again</span>
+  </div>
+</div>
+
+<script>
+(function(){
+  const OPEN_DELAY = 3000;
+  const REOPEN_INTERVAL = 15000;
+
+  const popup = document.getElementById('salesPopup');
+  const closeBtn = document.getElementById('salesClose');
+  const dontShow = document.getElementById('dontShow');
+
+  const chatBtn = document.getElementById('chatBtn');
+  const bookBtn = document.getElementById('bookBtn');
+
+  let reopenTimer = null;
+  let popupOpen = false;
+
+  function showPopup() {
+    if (dontShow.checked) return;
+    popup.classList.add('show','anim-in');
+    popupOpen = true;
+  }
+
+  function hidePopup() {
+    popup.classList.remove('show','anim-in');
+    popupOpen = false;
+  }
+
+  function scheduleReopen() {
+    clearInterval(reopenTimer);
+    reopenTimer = setInterval(() => {
+      if (!popupOpen && !dontShow.checked) showPopup();
+    }, REOPEN_INTERVAL);
+  }
+
+  closeBtn.addEventListener('click', hidePopup);
+  [chatBtn, bookBtn].forEach(btn => {
+    btn.addEventListener('click', () => {
+      clearInterval(reopenTimer);
+    });
+  });
+
+  setTimeout(() => {
+    showPopup();
+    scheduleReopen();
+  }, OPEN_DELAY);
+
+})();
+</script>
+
+<!-- Whatsaap End  -->
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
