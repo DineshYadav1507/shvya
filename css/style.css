@@ -1755,8 +1755,18 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; mar
     }
 }
 
-
 /* CTA CSS End */
+
+/* Font CSS Start  */
+
+.script-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;   /* adjust if needed */
+  font-weight: 600;
+  font-style: italic;
+}
+
+
 
 
 
