@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shvya — Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --panel:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --accent-2:#7c3aed; --glass:#f8fafc; --card-shadow:0 10px 30px rgba(2,6,23,0.06);
+      --radius:12px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#0f172a;background:var(--bg);-webkit-font-smoothing:antialiased}
+
+    .container{max-width:var(--maxw);margin:36px auto;padding:20px}
+
+    /* Top nav */
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px;box-shadow:0 8px 30px rgba(124,58,237,0.08)}
+    .brand h1{margin:0;font-size:18px;color:#0f172a}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav.top{display:flex;gap:12px}
+    nav.top a{padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav.top a.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+
+    /* hero */
+    .hero{background:linear-gradient(180deg, rgba(14,165,164,0.06), rgba(124,58,237,0.03));padding:20px;border-radius:14px;border:1px solid rgba(15,23,42,0.04);display:flex;align-items:center;gap:16px}
+    .hero .left{flex:1}
+    .hero .meta{font-size:13px;color:var(--muted)}
+    .hero h2{margin:6px 0 4px 0;font-size:20px;color:#0f172a}
+    .hero p{margin:0;color:#334155}
+    .hero .actions{display:flex;gap:10px}
+
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--muted)}
+
+    /* main card */
+    .card{background:var(--panel);padding:20px;border-radius:var(--radius);box-shadow:var(--card-shadow);border:1px solid rgba(15,23,42,0.04)}
+
+    /* layout */
+    .layout{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:18px}
+    @media(max-width:920px){.layout{grid-template-columns:1fr}}
+
+    /* toc */
+    .toc{position:sticky;top:20px}
+    .toc h3{margin:0 0 8px 0;font-size:14px;color:#0f172a}
+    .toc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .toc a{display:block;padding:10px;border-radius:10px;color:#0f172a;text-decoration:none;border:1px solid rgba(15,23,42,0.03);background:transparent}
+    .toc a:hover{background:var(--glass)}
+
+    /* content */
+    .policy h3{margin-top:0}
+    .section{margin-bottom:18px}
+    .section .card-inner{background:linear-gradient(180deg, rgba(15,23,42,0.02), rgba(15,23,42,0.01));padding:14px;border-radius:10px;border:1px solid rgba(15,23,42,0.03)}
+    ul{margin:10px 0 14px 18px;color:#0f172a}
+    p{margin:0 0 12px;color:#334155}
+
+    .muted{color:var(--muted)}
+
+    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    /* print */
+    @media print{nav.top, .hero .actions{display:none}.container{padding:0}}
+  </style>
+</head>
+<body>
+  <main class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <h1>Shvya</h1>
+          <p>Operations · Visibility · Scale</p>
+        </div>
+      </div>
+
+      <nav class="top" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+       
+      </nav>
+    </header>
+
+    <section class="hero card" aria-labelledby="policy-hero">
+      <div class="left">
+        <div class="meta">The Shvya Promise</div>
+        <h2 id="policy-hero">Privacy Policy — Shvya</h2>
+        <p>Shvya (operated by Tecjnanam Academy LLP) values your privacy. This Privacy Policy explains what personal data we collect, why we collect it, how we use it, where it is stored, how long we retain it, and your rights in relation to your personal data. Please read this policy carefully. You can print this page for your records using your browser’s print function.</p>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="downloadPDF">Download PDF</button>
+        <button class="btn ghost" id="printBtn">Print</button>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="toc card" aria-label="Table of contents">
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#controller">1. Controller / Owner</a></li>
+          <li><a href="#scope">2. Scope & Overview</a></li>
+          <li><a href="#collect">3. Personal Data We Collect</a></li>
+          <li><a href="#use">4. How We Use Your Data</a></li>
+          <li><a href="#retention">5. Retention Periods</a></li>
+          <li><a href="#sharing">6. Data Sharing & Recipients</a></li>
+          <li><a href="#transfers">7. International Transfers</a></li>
+          <li><a href="#security">8. Security</a></li>
+          <li><a href="#cookies">9. Cookies & Tracking</a></li>
+          <li><a href="#rights">10. Your Data Subject Rights</a></li>
+          <li><a href="#deletion">11. Data Deletion Requests</a></li>
+          <li><a href="#logs">12. System Logs & Maintenance</a></li>
+          <li><a href="#children">13. Children</a></li>
+          <li><a href="#changes">14. Changes to This Privacy Policy</a></li>
+          <li><a href="#additional">15. Additional Legal Information</a></li>
+          <li><a href="#definitions">16. Definitions</a></li>
+          <li><a href="#contact">17. Contact & Complaints</a></li>
+        </ul>
+      </aside>
+
+      <article class="policy card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div>
+            <div class="muted small">Last updated:</div>
+            <div id="lastUpdated" style="font-weight:700">[Insert date]</div>
+          </div>
+          <div class="muted small">Brand: Shvya — Tecjnanam Academy LLP</div>
+        </div>
+
+        <section id="controller" class="section">
+          <h3>1. Controller / Owner</h3>
+          <div class="card-inner">
+            <p><strong>Data Controller:</strong> Tecjnanam Academy LLP</p>
+            <p><strong>Brand / Website:</strong> Shvya</p>
+            <p><strong>Contact email:</strong> <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a></p>
+            <p>If you have questions about this policy or want to exercise your data rights, contact us at the address above.</p>
+          </div>
+        </section>
+
+        <section id="scope" class="section">
+          <h3>2. Scope & Overview</h3>
+          <div class="card-inner">
+            <p>This Policy applies to personal data collected by Shvya through our website, forms, email communications, phone contact, public profiles and other services we provide. It also explains the lawful basis for processing, retention periods, security measures, and how to request deletion or other actions.</p>
+          </div>
+        </section>
+
+        <section id="collect" class="section">
+          <h3>3. Personal Data We Collect</h3>
+          <div class="card-inner">
+            <p>We collect the following categories of personal data, either directly from you or via third-party services you interact with:</p>
+            <h4>Identity & Contact Data</h4>
+            <ul>
+              <li>First name, last name</li>
+              <li>Email address</li>
+              <li>Phone number</li>
+            </ul>
+
+            <h4>Profile & Interaction Data</h4>
+            <ul>
+              <li>Data you provide in contact forms, enquiries, support requests</li>
+              <li>Public profile information and any content you post or upload</li>
+              <li>Notes, messages and communication history with our team</li>
+            </ul>
+
+            <h4>Usage & Technical Data</h4>
+            <ul>
+              <li>IP address, browser type and version, device identifiers</li>
+              <li>Pages visited, time and date of visits, referring pages, clickstream data</li>
+              <li>Other system logs and diagnostic data</li>
+            </ul>
+
+            <h4>Other</h4>
+            <p>Any additional data you voluntarily provide (e.g., attachments, documents)</p>
+
+            <p>Unless stated otherwise in the form or context of collection, providing requested personal data is voluntary but may be necessary for us to provide particular services (for example, responding to an enquiry).</p>
+          </div>
+        </section>
+
+        <section id="use" class="section">
+          <h3>4. How We Use Your Data (Purposes & Legal Bases)</h3>
+          <div class="card-inner">
+            <p>We process personal data for the following purposes:</p>
+            <ul>
+              <li><strong>Contacting you / Responding to enquiries</strong> (Contact form, email, phone) — <em>Legal basis:</em> performance of a contract or legitimate interest to respond to enquiries. <br><strong>Data used:</strong> name, email, phone, message content.</li>
+
+              <li><strong>Mailing list / Newsletters</strong> — <em>Legal basis:</em> consent. <br><strong>Data used:</strong> name, email. You may unsubscribe at any time.</li>
+
+              <li><strong>Service delivery & support</strong> (proposals, product onboarding) — <em>Legal basis:</em> performance of contract and legitimate interest. <br><strong>Data used:</strong> contact, profile and interaction data relevant to the service.</li>
+
+              <li><strong>Information collection & account management</strong> (user profiles, public profiles) — <em>Legal basis:</em> contract performance and legitimate interest. <br><strong>Data used:</strong> profile, usage data.</li>
+
+              <li><strong>Security, fraud prevention and legal compliance</strong> — <em>Legal basis:</em> legitimate interests and compliance with legal obligations. <br><strong>Data used:</strong> technical & usage data, identity data.</li>
+
+              <li><strong>Marketing & promotional communications</strong> — <em>Legal basis:</em> consent or legitimate interest (where allowed). You can opt-out at any time.</li>
+
+              <li><strong>Operational & analytics purposes</strong> (improving site, product and services) — <em>Legal basis:</em> legitimate interest. <br><strong>Data used:</strong> usage and technical data.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="retention" class="section">
+          <h3>5. Retention Periods</h3>
+          <div class="card-inner">
+            <p>We retain personal data only as long as necessary for the purpose it was collected, or to comply with legal or regulatory obligations.</p>
+            <ul>
+              <li>Data processed for contract performance: retained until the contractual relationship ends and any required retention period expires.</li>
+              <li>Marketing data (with consent): retained until consent is withdrawn.</li>
+              <li>Data processed for legitimate interests: retained as long as needed to fulfill those interests, subject to legal limits.</li>
+            </ul>
+            <p>Once retention periods expire, data will be securely deleted or anonymized.</p>
+            <p>If you have specific questions about retention for particular data, contact us at <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a>.</p>
+          </div>
+        </section>
+
+        <section id="sharing" class="section">
+          <h3>6. Data Sharing & Recipients</h3>
+          <div class="card-inner">
+            <p>Your data may be shared with:</p>
+            <ul>
+              <li>Our employees and authorized staff (administration, sales, marketing, system administration) who need it to perform their duties.</li>
+              <li>Third-party service providers acting as Data Processors (e.g., hosting providers, email platforms, analytics, CRM, payment processors). We require processors to take appropriate security measures and act only on our instructions.</li>
+              <li>Legal or governmental authorities where required by law or to protect our rights.</li>
+            </ul>
+            <p>We maintain an up-to-date list of third-party processors which you may request by contacting us.</p>
+          </div>
+        </section>
+
+        <section id="transfers" class="section">
+          <h3>7. International Transfers</h3>
+          <div class="card-inner">
+            <p>Some of our service providers and processors may be located outside your country. Where personal data is transferred internationally, we will ensure appropriate safeguards are in place (such as standard contractual clauses, or transfers to countries with adequate protection) to protect your data.</p>
+          </div>
+        </section>
+
+        <section id="security" class="section">
+          <h3>8. Security</h3>
+          <div class="card-inner">
+            <p>We adopt reasonable technical and organizational measures to protect personal data from unauthorized access, disclosure, alteration or destruction. Measures include access controls, encryption where appropriate, regular audits, and secure hosting environments. However, no system is 100% secure — if you suspect a security breach, contact us immediately.</p>
+          </div>
+        </section>
+
+        <section id="cookies" class="section">
+          <h3>9. Cookies & Tracking Technologies</h3>
+          <div class="card-inner">
+            <p>We and our third-party service providers use cookies and similar technologies to provide, analyse and improve our services. Cookies may be used to:</p>
+            <ul>
+              <li>Store user preferences and session data</li>
+              <li>Enable website functionality</li>
+              <li>Measure and analyze usage and performance</li>
+            </ul>
+            <p>For full details, please see our Cookie Policy or the cookie notice presented when you first visit our site. You can manage cookie preferences via your browser settings.</p>
+          </div>
+        </section>
+
+        <section id="rights" class="section">
+          <h3>10. Your Data Subject Rights</h3>
+          <div class="card-inner">
+            <p>Where applicable (for example under the GDPR), you have the following rights in relation to your personal data:</p>
+            <ul>
+              <li><strong>Access:</strong> request confirmation whether we process your personal data and obtain a copy of that data.</li>
+              <li><strong>Rectification:</strong> request correction of inaccurate or incomplete data.</li>
+              <li><strong>Erasure (Right to be forgotten):</strong> request deletion of your personal data where there is no legal reason for us to retain it.</li>
+              <li><strong>Restriction:</strong> request the restriction of processing in certain circumstances.</li>
+              <li><strong>Portability:</strong> receive your data in a structured, commonly used, machine-readable format and transmit it to another controller where technically feasible.</li>
+              <li><strong>Object:</strong> object to processing based on legitimate interests or for direct marketing.</li>
+              <li><strong>Withdraw consent:</strong> where processing is based on consent, withdraw it at any time (this does not affect processing prior to withdrawal).</li>
+              <li><strong>Lodge a complaint:</strong> with your competent data protection authority if you believe your rights are infringed.</li>
+            </ul>
+            <p>To exercise any of the above rights, contact us at <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a>. We will respond as required by applicable law and, in any event, within one month where legally mandated (extensions possible in complex cases).</p>
+          </div>
+        </section>
+
+        <section id="deletion" class="section">
+          <h3>11. Data Deletion Requests</h3>
+          <div class="card-inner">
+            <p>If you wish to delete your data, email <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a> with the subject line “Data Deletion Request” and include details (email, name, any identifiers). We will verify your identity and process the request in accordance with applicable law.</p>
+          </div>
+        </section>
+
+        <section id="logs" class="section">
+          <h3>12. System Logs & Maintenance</h3>
+          <div class="card-inner">
+            <p>We may collect system logs (e.g., IP addresses, server logs) for site security, debugging, and to maintain the service. Such data is used to detect abuse, troubleshoot and maintain availability.</p>
+          </div>
+        </section>
+
+        <section id="children" class="section">
+          <h3>13. Children</h3>
+          <div class="card-inner">
+            <p>Our services are not directed to children under the age of 18. We do not knowingly collect personal data from children. If you believe we have inadvertently collected such data, contact us to request deletion.</p>
+          </div>
+        </section>
+
+        <section id="changes" class="section">
+          <h3>14. Changes to This Privacy Policy</h3>
+          <div class="card-inner">
+            <p>We may update this Privacy Policy from time to time. When we do, we will update the “Last updated” date at the top of this page. Material changes will be notified via the website and/or email where required. We recommend that you review this page periodically.</p>
+          </div>
+        </section>
+
+        <section id="additional" class="section">
+          <h3>15. Additional Legal Information</h3>
+          <div class="card-inner">
+            <p><strong>Legal basis for processing:</strong> We rely on contract performance, consent (where applicable), compliance with legal obligations, and legitimate interests to process data (where applicable). If you need clarification on which basis applies for a specific processing activity, contact us.</p>
+            <p><strong>Legal action:</strong> Your data may be used for legal purposes by the Owner in court or in the stages leading to possible legal action arising from improper use of the Website or Services.</p>
+          </div>
+        </section>
+
+        <section id="definitions" class="section">
+          <h3>16. Definitions</h3>
+          <div class="card-inner">
+            <p>For the purposes of this policy:</p>
+            <ul>
+              <li><strong>Personal Data:</strong> any information relating to an identifiable person.</li>
+              <li><strong>Usage Data:</strong> automatically collected information from use of the website (IP, pages visited, time spent, etc.).</li>
+              <li><strong>Controller (Owner):</strong> the entity determining the purposes and means of processing personal data (Tecjnanam Academy LLP).</li>
+              <li><strong>Processor:</strong> third parties processing personal data on behalf of the Controller.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <h3>17. Contact & Complaints</h3>
+          <div class="card-inner">
+            <p>If you have any questions about this Policy, wish to exercise your rights, or want to request data deletion, contact:</p>
+            <ul>
+              <li><strong>Tecjnanam Academy LLP (Shvya)</strong></li>
+              <li>Email: <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a></li>
+              <li>Phone: <a href="tel:+918700274739">+91-8700274739</a></li>
+              <li>Website: <a href="https://www.shvya.com">www.shvya.com</a></li>
+            </ul>
+            <p>If you are not satisfied with our response, you have the right to lodge a complaint with your local data protection authority.</p>
+          </div>
+        </section>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button class="btn primary" id="downloadPDF2">Download PDF</button>
+          <button class="btn ghost" id="printBtn2">Print</button>
+          <div style="margin-left:auto;color:var(--muted);font-size:13px">Effective: <span id="effectiveDate">[Insert date]</span></div>
+        </div>
+
+      </article>
+    </div>
+
+    <footer>
+      <div>© <strong>Shvya</strong> — Building operations that scale.</div>
+      <div style="display:flex;gap:12px"><a href="#" class="muted">Terms</a><a href="#" class="muted">Support</a></div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(a=>{
+      a.addEventListener('click',(e)=>{e.preventDefault(); const id=a.getAttribute('href').slice(1); const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth', block:'start'})});
+    });
+
+    // Print / Download: open print dialog
+    document.getElementById('printBtn').addEventListener('click', ()=> window.print());
+    document.getElementById('downloadPDF').addEventListener('click', ()=> window.print());
+    document.getElementById('printBtn2').addEventListener('click', ()=> window.print());
+    document.getElementById('downloadPDF2').addEventListener('click', ()=> window.print());
+
+    // Dynamic dates (set lastUpdated and effectiveDate if left as placeholder)
+    const last = document.getElementById('lastUpdated');
+    const eff = document.getElementById('effectiveDate');
+    const today = new Date();
+    const opts = { year:'numeric', month:'long', day:'numeric' };
+    const txt = today.toLocaleDateString(undefined, opts);
+    if(last.textContent.trim() === '[Insert date]') last.textContent = txt;
+    if(eff.textContent.trim() === '[Insert date]') eff.textContent = txt;
+
+    // Accessibility: keyboard focus for TOC
+    document.querySelectorAll('.toc a').forEach(link=>link.setAttribute('tabindex','0'));
+  </script>
+</body>
+</html>

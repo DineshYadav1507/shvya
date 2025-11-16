@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shvya — Cookie Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --panel:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --accent-2:#7c3aed; --glass:#f8fafc; --card-shadow:0 10px 30px rgba(2,6,23,0.06);
+      --radius:12px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#0f172a;background:var(--bg);-webkit-font-smoothing:antialiased}
+
+    .container{max-width:var(--maxw);margin:36px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px;box-shadow:0 8px 30px rgba(124,58,237,0.08)}
+    .brand h1{margin:0;font-size:18px;color:#0f172a}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav.top{display:flex;gap:12px}
+    nav.top a{padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav.top a.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+
+    .hero{background:linear-gradient(180deg, rgba(14,165,164,0.06), rgba(124,58,237,0.03));padding:20px;border-radius:14px;border:1px solid rgba(15,23,42,0.04);display:flex;align-items:center;gap:16px}
+    .hero .left{flex:1}
+    .hero .meta{font-size:13px;color:var(--muted)}
+    .hero h2{margin:6px 0 4px 0;font-size:20px;color:#0f172a}
+    .hero p{margin:0;color:#334155}
+    .hero .actions{display:flex;gap:10px}
+
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--muted)}
+
+    .card{background:var(--panel);padding:20px;border-radius:var(--radius);box-shadow:var(--card-shadow);border:1px solid rgba(15,23,42,0.04)}
+
+    .layout{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:18px}
+    @media(max-width:920px){.layout{grid-template-columns:1fr}}
+
+    .toc{position:sticky;top:20px}
+    .toc h3{margin:0 0 8px 0;font-size:14px;color:#0f172a}
+    .toc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .toc a{display:block;padding:10px;border-radius:10px;color:#0f172a;text-decoration:none;border:1px solid rgba(15,23,42,0.03);background:transparent}
+    .toc a:hover{background:var(--glass)}
+
+    .policy h3{margin-top:0}
+    .section{margin-bottom:18px}
+    .section .card-inner{background:linear-gradient(180deg, rgba(15,23,42,0.02), rgba(15,23,42,0.01));padding:14px;border-radius:10px;border:1px solid rgba(15,23,42,0.03)}
+    ul{margin:10px 0 14px 18px;color:#0f172a}
+    p{margin:0 0 12px;color:#334155}
+
+    .muted{color:var(--muted)}
+
+    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    @media print{nav.top, .hero .actions{display:none}.container{padding:0}}
+  </style>
+</head>
+<body>
+  <main class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <h1>Shvya</h1>
+          <p>Operations · Visibility · Scale</p>
+        </div>
+      </div>
+
+      <nav class="top" aria-label="Main navigation">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a class="active" href="#cookies">Cookie Policy</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero card" aria-labelledby="cookies-hero">
+      <div class="left">
+        <div class="meta">Shvya — Cookie Policy</div>
+        <h2 id="cookies-hero">Cookie Policy — Shvya</h2>
+        <p>This Cookie Policy explains how Shvya (operated by Tecjnanam Academy LLP) uses cookies and similar tracking technologies on our website. By using our website, you agree that we can store and access cookies as described in this policy. If you do not agree, you may disable cookies through your browser settings (instructions below).</p>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="downloadPDF">Download PDF</button>
+        <button class="btn ghost" id="printBtn">Print</button>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="toc card" aria-label="Table of contents">
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#what">1. What Are Cookies?</a></li>
+          <li><a href="#use">2. How We Use Cookies</a></li>
+          <li><a href="#third">3. Third-Party Cookies</a></li>
+          <li><a href="#personal">4. Personal Data & Cookies</a></li>
+          <li><a href="#manage">5. How to Manage or Disable Cookies</a></li>
+          <li><a href="#consent">6. Consent</a></li>
+          <li><a href="#updates">7. Updates to This Cookie Policy</a></li>
+          <li><a href="#contact">8. Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <article class="policy card" id="cookies">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div>
+            <div class="muted small">Last Updated:</div>
+            <div id="lastUpdated" style="font-weight:700">[Insert Date]</div>
+          </div>
+          <div class="muted small">Operated by: Tecjnanam Academy LLP — Brand: Shvya</div>
+        </div>
+
+        <section id="what" class="section">
+          <h3>1. What Are Cookies?</h3>
+          <div class="card-inner">
+            <p>Cookies are small text files stored on your device when you visit a website. They help websites:</p>
+            <ul>
+              <li>Recognize your device</li>
+              <li>Remember your preferences</li>
+              <li>Improve your browsing experience</li>
+              <li>Analyze website performance</li>
+              <li>Personalize content and ads</li>
+            </ul>
+            <p>Cookies cannot access files on your device, harm your system, or collect personal information without your consent.</p>
+          </div>
+        </section>
+
+        <section id="use" class="section">
+          <h3>2. How We Use Cookies</h3>
+          <div class="card-inner">
+            <p>Shvya uses cookies for several purposes. Below we summarise the main categories:</p>
+
+            <h4>A. Essential & Functional Cookies</h4>
+            <ul>
+              <li>Enable core features such as page navigation, secure login (if applicable), form submissions, and site preferences.</li>
+              <li>Without these cookies, the website may not function properly.</li>
+            </ul>
+
+            <h4>B. Analytics & Performance Cookies</h4>
+            <ul>
+              <li>Help us understand how visitors use the website so we can improve it (pages visited, time on page, errors, traffic sources).</li>
+              <li>We may use tools like Google Analytics for this purpose.</li>
+            </ul>
+
+            <h4>C. Preference Cookies</h4>
+            <ul>
+              <li>Remember language settings, display preferences, and previously selected options for a smoother, personalised experience.</li>
+            </ul>
+
+            <h4>D. Marketing & Third-Party Cookies</h4>
+            <ul>
+              <li>Used only if applicable to show relevant ads, track ad performance, and measure campaign impact.</li>
+              <li>Examples include Meta Pixel, Google Ads, etc. You will only encounter marketing cookies if we run ads or tracking scripts on a specific page.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="third" class="section">
+          <h3>3. Third-Party Cookies</h3>
+          <div class="card-inner">
+            <p>Some cookies may come from third-party providers integrated into our website, such as Google (Analytics, reCAPTCHA), Meta (Facebook/Instagram Pixel), WhatsApp widgets, payment gateways, and embedded content. These third parties control their cookies and have separate privacy policies — Shvya does not control or access third-party cookie data.</p>
+          </div>
+        </section>
+
+        <section id="personal" class="section">
+          <h3>4. Personal Data & Cookies</h3>
+          <div class="card-inner">
+            <p>Some cookies may collect personal data such as device information, IP address, browser type, session identifiers, and interaction data. Any personal data collected through cookies is processed according to the Shvya Privacy Policy.</p>
+          </div>
+        </section>
+
+        <section id="manage" class="section">
+          <h3>5. How to Manage or Disable Cookies</h3>
+          <div class="card-inner">
+            <p>You can control or delete cookies at any time through your browser settings:</p>
+            <ul>
+              <li><strong>Chrome:</strong> Settings → Privacy & Security → Cookies and other site data</li>
+              <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
+              <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies and Site Data</li>
+              <li><strong>Microsoft Edge:</strong> Settings → Cookies and site permissions</li>
+            </ul>
+            <p>You can block all cookies, allow only essential cookies, clear existing cookies, or block third-party cookies. Note: If you disable cookies, some features of the Shvya website may no longer work properly.</p>
+          </div>
+        </section>
+
+        <section id="consent" class="section">
+          <h3>6. Consent</h3>
+          <div class="card-inner">
+            <p>When you visit the Shvya website for the first time, you may see a cookie banner asking for your consent regarding non-essential cookies. By continuing to use the site after seeing the notice, you consent to our use of cookies as described. You may withdraw your consent at any time by adjusting your browser settings.</p>
+          </div>
+        </section>
+
+        <section id="updates" class="section">
+          <h3>7. Updates to This Cookie Policy</h3>
+          <div class="card-inner">
+            <p>Shvya may update this Cookie Policy from time to time to reflect changes in applicable laws, website functionality, or technology. Any changes will be posted on this page with an updated “Last Updated” date.</p>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <h3>8. Contact Us</h3>
+          <div class="card-inner">
+            <p>If you have questions about this Cookie Policy or how we use cookies, contact:</p>
+            <ul>
+              <li>Email: <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a></li>
+              <li>Website: <a href="https://www.shvya.com">www.shvya.com</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button class="btn primary" id="downloadPDF2">Download PDF</button>
+          <button class="btn ghost" id="printBtn2">Print</button>
+          <div style="margin-left:auto;color:var(--muted);font-size:13px">Last Updated: <span id="effectiveDate">[Insert Date]</span></div>
+        </div>
+
+      </article>
+    </div>
+
+    <footer>
+      <div>© <strong>Shvya</strong> — Building operations that scale.</div>
+      <div style="display:flex;gap:12px"><a href="#" class="muted">Privacy</a><a href="#" class="muted">Support</a></div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(a=>{
+      a.addEventListener('click',(e)=>{e.preventDefault(); const id=a.getAttribute('href').slice(1); const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth', block:'start'})});
+    });
+
+    // Print / Download: open print dialog
+    document.getElementById('printBtn').addEventListener('click', ()=> window.print());
+    document.getElementById('downloadPDF').addEventListener('click', ()=> window.print());
+    document.getElementById('printBtn2').addEventListener('click', ()=> window.print());
+    document.getElementById('downloadPDF2').addEventListener('click', ()=> window.print());
+
+    // Dynamic dates (set placeholders if left)
+    const last = document.getElementById('lastUpdated');
+    const eff = document.getElementById('effectiveDate');
+    const today = new Date();
+    const opts = { year:'numeric', month:'long', day:'numeric' };
+    const txt = today.toLocaleDateString(undefined, opts);
+    if(last.textContent.trim() === '[Insert Date]') last.textContent = txt;
+    if(eff.textContent.trim() === '[Insert Date]' || eff.textContent.trim() === '') eff.textContent = txt;
+
+    // Accessibility: keyboard focus for TOC
+    document.querySelectorAll('.toc a').forEach(link=>link.setAttribute('tabindex','0'));
+  </script>
+</body>
+</html>

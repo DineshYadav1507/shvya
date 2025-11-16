@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shvya — Terms & Conditions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --panel:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --accent-2:#7c3aed; --glass:#f8fafc; --card-shadow:0 10px 30px rgba(2,6,23,0.06);
+      --radius:12px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#0f172a;background:var(--bg);-webkit-font-smoothing:antialiased}
+
+    .container{max-width:var(--maxw);margin:36px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:20px;box-shadow:0 8px 30px rgba(124,58,237,0.08)}
+    .brand h1{margin:0;font-size:18px;color:#0f172a}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav.top{display:flex;gap:12px}
+    nav.top a{padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none;font-weight:600}
+    nav.top a.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+
+    .hero{background:linear-gradient(180deg, rgba(14,165,164,0.06), rgba(124,58,237,0.03));padding:20px;border-radius:14px;border:1px solid rgba(15,23,42,0.04);display:flex;align-items:center;gap:16px}
+    .hero .left{flex:1}
+    .hero .meta{font-size:13px;color:var(--muted)}
+    .hero h2{margin:6px 0 4px 0;font-size:20px;color:#0f172a}
+    .hero p{margin:0;color:#334155}
+    .hero .actions{display:flex;gap:10px}
+
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--muted)}
+
+    .card{background:var(--panel);padding:20px;border-radius:var(--radius);box-shadow:var(--card-shadow);border:1px solid rgba(15,23,42,0.04)}
+
+    .layout{display:grid;grid-template-columns:260px 1fr;gap:20px;margin-top:18px}
+    @media(max-width:920px){.layout{grid-template-columns:1fr}}
+
+    .toc{position:sticky;top:20px}
+    .toc h3{margin:0 0 8px 0;font-size:14px;color:#0f172a}
+    .toc ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .toc a{display:block;padding:10px;border-radius:10px;color:#0f172a;text-decoration:none;border:1px solid rgba(15,23,42,0.03);background:transparent}
+    .toc a:hover{background:var(--glass)}
+
+    .policy h3{margin-top:0}
+    .section{margin-bottom:18px}
+    .section .card-inner{background:linear-gradient(180deg, rgba(15,23,42,0.02), rgba(15,23,42,0.01));padding:14px;border-radius:10px;border:1px solid rgba(15,23,42,0.03)}
+    ul{margin:10px 0 14px 18px;color:#0f172a}
+    p{margin:0 0 12px;color:#334155}
+
+    .muted{color:var(--muted)}
+
+    footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}
+
+    @media print{nav.top, .hero .actions{display:none}.container{padding:0}}
+  </style>
+</head>
+<body>
+  <main class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <h1>Shvya</h1>
+          <p>Operations · Visibility · Scale</p>
+        </div>
+      </div>
+
+      <nav class="top" aria-label="Main navigation">
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a class="active" href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero card" aria-labelledby="terms-hero">
+      <div class="left">
+        <div class="meta">Shvya — Terms & Conditions</div>
+        <h2 id="terms-hero">Terms & Conditions — Shvya</h2>
+        <p>By accessing, purchasing, deploying, or using Shvya products or services you agree to these Terms & Conditions. Please read them carefully. If you do not agree, discontinue use immediately.</p>
+      </div>
+
+      <div class="actions">
+        <button class="btn primary" id="downloadPDF">Download PDF</button>
+        <button class="btn ghost" id="printBtn">Print</button>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="toc card" aria-label="Table of contents">
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+          <li><a href="#definitions">2. Definitions</a></li>
+          <li><a href="#use">3. Use of Our Software & Services</a></li>
+          <li><a href="#deployment">4. Deployment, Access & Usage</a></li>
+          <li><a href="#payments">5. Payments & Billing</a></li>
+          <li><a href="#refunds">6. Refund Policy</a></li>
+          <li><a href="#cancellation">7. Cancellation Policy</a></li>
+          <li><a href="#ip">8. Intellectual Property Rights</a></li>
+          <li><a href="#userdata">9. User Data & Privacy</a></li>
+          <li><a href="#support">10. Support & Issue Resolution</a></li>
+          <li><a href="#custom">11. Custom Development & Integrations</a></li>
+          <li><a href="#liability">12. Limitation of Liability</a></li>
+          <li><a href="#termination">13. Termination</a></li>
+          <li><a href="#changes">14. Changes to These Terms</a></li>
+          <li><a href="#law">15. Governing Law</a></li>
+          <li><a href="#contact">16. Contact Information</a></li>
+        </ul>
+      </aside>
+
+      <article class="policy card" id="terms">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <div>
+            <div class="muted small">Last Updated:</div>
+            <div id="lastUpdated" style="font-weight:700">[Insert Date]</div>
+          </div>
+          <div class="muted small">Operated by: Tecjnanam Academy LLP — Brand: Shvya</div>
+        </div>
+
+        <section id="acceptance" class="section">
+          <h3>1. Acceptance of Terms</h3>
+          <div class="card-inner">
+            <p>These Terms govern your use of Shvya's SaaS products (CRM, ERP, HRM, Billing, Geo-Fencing, Shvya AI, etc.), digital services (web/app development), website, tools, dashboards, and associated features. By continuing to use Shvya you acknowledge that you have read, understood and accepted these Terms. If you do not agree, discontinue use immediately.</p>
+          </div>
+        </section>
+
+        <section id="definitions" class="section">
+          <h3>2. Definitions</h3>
+          <div class="card-inner">
+            <ul>
+              <li><strong>We / Us / Shvya:</strong> Tecjnanam Academy LLP and the Shvya brand.</li>
+              <li><strong>User / Client / You:</strong> any individual or business using Shvya products or services.</li>
+              <li><strong>Products:</strong> Shvya CRM, Shvya AI, HRM+Payroll, ERP systems, Billing, Geo-Fencing, etc.</li>
+              <li><strong>Services:</strong> web development, app development, deployment, customization, integration, support, etc.</li>
+              <li><strong>Deployment:</strong> the setup, installation, configuration, or activation of your Shvya product or service.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="use" class="section">
+          <h3>3. Use of Our Software & Services</h3>
+          <div class="card-inner">
+            <p>By using Shvya's products or services you agree to:</p>
+            <ul>
+              <li>Use them only for lawful business purposes.</li>
+              <li>Not misuse, copy, resell, reverse-engineer, or duplicate any part of the software.</li>
+              <li>Provide accurate information during onboarding and support interactions.</li>
+              <li>Maintain confidentiality of your login credentials.</li>
+              <li>Take responsibility for activity performed using your account.</li>
+            </ul>
+            <p>We reserve the right to suspend services if misuse, suspicious activity, or violation of these terms is detected.</p>
+          </div>
+        </section>
+
+        <section id="deployment" class="section">
+          <h3>4. Deployment, Access & Usage</h3>
+          <div class="card-inner">
+            <p>Products and services are deployed only after payment is completed. After deployment, clients receive a 7-day usage period to test and evaluate the deployed system.</p>
+            <p>Clients must ensure correct environment, data, hosting (if applicable), and device compatibility for optimal performance. Shvya is not responsible for issues arising from poor internet connectivity, faulty devices, third-party platforms or hosting, or misconfigurations caused by the client.</p>
+          </div>
+        </section>
+
+        <section id="payments" class="section">
+          <h3>5. Payments & Billing</h3>
+          <div class="card-inner">
+            <ul>
+              <li>All payments must be made in full before deployment.</li>
+              <li>Payments may include product fees, setup fees, custom development charges, and add-on costs.</li>
+              <li>All invoices must be settled through the payment methods specified by Shvya.</li>
+              <li>Late payments or dishonored transactions may lead to suspension of access.</li>
+              <li>Shvya does not offer recurring monthly subscription plans unless explicitly stated.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="refunds" class="section">
+          <h3>6. Refund Policy</h3>
+          <div class="card-inner">
+            <p>Refunds are available only within the first 7 days after deployment. After the 7-day window, no refunds will be issued. Setup/deployment fees and custom work fees are non-refundable. Refund requests must be emailed to <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a>.</p>
+            <p>For the full Refund Policy, please refer to the Refund Policy page or contact support.</p>
+          </div>
+        </section>
+
+        <section id="cancellation" class="section">
+          <h3>7. Cancellation Policy</h3>
+          <div class="card-inner">
+            <p>Clients may stop using the product or service at any time. Cancellation does not entitle you to a refund after the 7-day usage period. There are no partial or pro-rated refunds. Since Shvya does not operate on subscriptions, stopping usage simply ends access. Full cancellation terms are included in the Refund Policy.</p>
+          </div>
+        </section>
+
+        <section id="ip" class="section">
+          <h3>8. Intellectual Property Rights</h3>
+          <div class="card-inner">
+            <p>All Shvya products, code, UI/UX designs, branding, features, documentation, logos and intellectual property are exclusively owned by Tecjnanam Academy LLP. Users are not allowed to copy, modify, resell, clone, reverse engineer, reproduce, or distribute any part of Shvya's proprietary software or materials. Violations may result in legal action.</p>
+          </div>
+        </section>
+
+        <section id="userdata" class="section">
+          <h3>9. User Data & Privacy</h3>
+          <div class="card-inner">
+            <p>Your data is handled as per our Privacy Policy. Shvya may collect necessary user data such as contact details, usage data, feedback, system logs and inquiry data. Data is used to provide, improve, and support the services.</p>
+            <p>See the Privacy Policy for full details.</p>
+          </div>
+        </section>
+
+        <section id="support" class="section">
+          <h3>10. Support & Issue Resolution</h3>
+          <div class="card-inner">
+            <p>Shvya provides technical support based on the product and service purchased. Support covers bug fixes, technical guidance, system navigation help, and issue diagnosis. Support does not include free customizations, additional module development, third-party integrations, UI/UX redesign, or server/hosting management (if client-owned). Custom work will be quoted separately.</p>
+          </div>
+        </section>
+
+        <section id="custom" class="section">
+          <h3>11. Custom Development & Integrations</h3>
+          <div class="card-inner">
+            <p>Requested customizations beyond standard product features must be approved by Shvya, will be charged separately, may extend delivery timelines, and are non-refundable. Integrations with third-party tools depend on their availability, pricing, and API stability. Shvya is not responsible for downtime, changes, or failures of third-party platforms.</p>
+          </div>
+        </section>
+
+        <section id="liability" class="section">
+          <h3>12. Limitation of Liability</h3>
+          <div class="card-inner">
+            <p>Shvya is not liable for loss of business or revenue, data loss caused by client-side error, misuse or mismanagement by client’s team, third-party service outages, or delays caused by external factors (hosting, APIs, internet, devices). Shvya’s liability is limited to the amount paid by the client for the deployed product or service.</p>
+          </div>
+        </section>
+
+        <section id="termination" class="section">
+          <h3>13. Termination</h3>
+          <div class="card-inner">
+            <p>Shvya may suspend or terminate access if terms are violated, fraud or abuse is detected, illegal activity is suspected, payment disputes arise, or misuse of the platform occurs. Termination does not entitle you to a refund.</p>
+          </div>
+        </section>
+
+        <section id="changes" class="section">
+          <h3>14. Changes to These Terms</h3>
+          <div class="card-inner">
+            <p>Shvya reserves the right to update these Terms & Conditions at any time without prior notice. The latest version will always be available on our website. Continued use of Shvya services signifies acceptance of updates.</p>
+          </div>
+        </section>
+
+        <section id="law" class="section">
+          <h3>15. Governing Law</h3>
+          <div class="card-inner">
+            <p>These Terms are governed by and interpreted in accordance with the applicable laws of India. Any disputes will be resolved under the jurisdiction of the courts located in India.</p>
+          </div>
+        </section>
+
+        <section id="contact" class="section">
+          <h3>16. Contact Information</h3>
+          <div class="card-inner">
+            <p>For queries regarding these Terms, contact:</p>
+            <ul>
+              <li>Email: <a href="mailto:shvyaai@gmail.com">shvyaai@gmail.com</a></li>
+              <li>Website: <a href="https://www.shvya.com">www.shvya.com</a></li>
+              <li>Phone: <a href="tel:+918700274739">+91-8700274739</a> (optional)</li>
+            </ul>
+          </div>
+        </section>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button class="btn primary" id="downloadPDF2">Download PDF</button>
+          <button class="btn ghost" id="printBtn2">Print</button>
+          <div style="margin-left:auto;color:var(--muted);font-size:13px">Effective: <span id="effectiveDate">[Insert Date]</span></div>
+        </div>
+
+      </article>
+    </div>
+
+    <footer>
+      <div>© <strong>Shvya</strong> — Building operations that scale.</div>
+      <div style="display:flex;gap:12px"><a href="#" class="muted">Privacy</a><a href="#" class="muted">Support</a></div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Smooth scroll for TOC links
+    document.querySelectorAll('.toc a').forEach(a=>{
+      a.addEventListener('click',(e)=>{e.preventDefault(); const id=a.getAttribute('href').slice(1); const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth', block:'start'})});
+    });
+
+    // Print / Download: open print dialog
+    document.getElementById('printBtn').addEventListener('click', ()=> window.print());
+    document.getElementById('downloadPDF').addEventListener('click', ()=> window.print());
+    document.getElementById('printBtn2').addEventListener('click', ()=> window.print());
+    document.getElementById('downloadPDF2').addEventListener('click', ()=> window.print());
+
+    // Dynamic dates (set lastUpdated and effectiveDate if left as placeholder)
+    const last = document.getElementById('lastUpdated');
+    const eff = document.getElementById('effectiveDate');
+    const today = new Date();
+    const opts = { year:'numeric', month:'long', day:'numeric' };
+    const txt = today.toLocaleDateString(undefined, opts);
+    if(last.textContent.trim() === '[Insert Date]') last.textContent = txt;
+    if(eff.textContent.trim() === '[Insert Date]') eff.textContent = txt;
+
+    // Accessibility: keyboard focus for TOC
+    document.querySelectorAll('.toc a').forEach(link=>link.setAttribute('tabindex','0'));
+  </script>
+</body>
+</html>
