@@ -1659,3 +1659,76 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; mar
 
 
 
+  /* CTA CSS Start  */
+
+  .sales-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #fff, #fff7ef);
+    padding: 40px 45px;
+    border-radius: 18px;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    gap: 20px;
+}
+
+.sales-left {
+    width: 55%;
+}
+
+.sales-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1e1e1e;
+    line-height: 1.2;
+}
+
+.sales-pill {
+    background: #4a63ff;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 8px;
+    margin: 0 8px;
+    display: inline-block;
+    font-size: 20px;
+    transform: rotate(-3deg);
+}
+
+.sales-desc {
+    font-size: 15px;
+    color: #555;
+    margin: 18px 0 25px;
+    max-width: 520px;
+}
+
+.sales-btn {
+    background: #d94832;
+    padding: 12px 22px;
+    border-radius: 30px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 18px rgba(217,72,50,0.3);
+}
+
+.sales-right img {
+    width: 350px;
+    max-width: 100%;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .sales-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sales-left, .sales-right {
+        width: 100%;
+    }
+}
+/* CTA CSS End */
+
+
+
