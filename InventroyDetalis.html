@@ -124,110 +124,524 @@
       </div>
     </section>
     <!-- ======== hero-section end ======== -->
+<!-- Results Section Strat -->
 
 
-<!-- ====================== SaaS Demo Login Access Section ====================== -->
-<!-- ====================== SIMPLE SAAS DEMO LOGIN CARDS ====================== -->
+<!-- START: Kraya Results Section (Enhanced - Style E) -->
+<section class="kraya3p-wrap" aria-labelledby="kraya3p-title">
+  <div class="kraya3p-right-panel" aria-hidden="true"></div>
+
+  <div class="kraya3p-inner">
+    <h2 id="kraya3p-title" class="kraya3p-heading">
+      <span class="kraya3p-gold">Results</span> You Can Expect With <span class="kraya3p-gold">Kraya AI-CRM</span>
+    </h2>
+    <p class="kraya3p-sub">Businesses using Kraya AI's lead management solution have experienced:</p>
+
+    <div class="kraya3p-stats" role="list">
+      <div class="kraya3p-stat" role="listitem" data-target="3" data-suffix="x" aria-label="3x faster lead response">
+        <div class="kraya3p-stat-inner">
+          <div class="kraya3p-number">0</div>
+          <div class="kraya3p-label">Faster Lead Response Time</div>
+        </div>
+      </div>
+
+      <div class="kraya3p-stat" role="listitem" data-target="40" data-suffix="%" aria-label="40% increase in productivity">
+        <div class="kraya3p-stat-inner">
+          <div class="kraya3p-number">0</div>
+          <div class="kraya3p-label">Increase In Sales Productivity</div>
+        </div>
+      </div>
+
+      <div class="kraya3p-stat" role="listitem" data-target="50" data-suffix="%" aria-label="50% reduced missed opportunities">
+        <div class="kraya3p-stat-inner">
+          <div class="kraya3p-number">0</div>
+          <div class="kraya3p-label">Reduced Missed Opportunities</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kraya3p-case" role="region" aria-label="Case study highlight">
+      <div class="kraya3p-case-left">
+        <h3 class="kraya3p-case-title">Case Study Highlight</h3>
+        <p class="kraya3p-case-text">
+          A financial services firm improved their sales efficiency by <strong>60%</strong> after switching to Kraya AI's intuitive CRM, resulting in higher conversion rates and improved team collaboration.
+        </p>
+      </div>
+
+      <div class="kraya3p-badges" aria-hidden="false">
+        <div class="kraya3p-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 4h4l-3 3 1 4-4-1-3 4-3-4-4 1 1-4-3-3h4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <div class="kraya3p-badge-title">STREAMLINED</div>
+          <div class="kraya3p-badge-sub">SALES PROCESS</div>
+        </div>
+
+        <div class="kraya3p-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M6 20v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3" stroke="currentColor" stroke-width="1.6"/></svg>
+          <div class="kraya3p-badge-title">ENHANCED</div>
+          <div class="kraya3p-badge-sub">TEAM COLLABORATION</div>
+        </div>
+
+        <div class="kraya3p-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <div class="kraya3p-badge-title">INCREASED</div>
+          <div class="kraya3p-badge-sub">LEAD ENGAGEMENT</div>
+        </div>
+
+        <div class="kraya3p-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16 5.5 20l2-7L2 9h7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <div class="kraya3p-badge-title">IMPROVED</div>
+          <div class="kraya3p-badge-sub">CONVERSION RATES</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <style>
-  .demo-login-section {
-    padding: 60px 20px;
-    background: #f3f4f6; /* light grey background */
-    font-family: "Inter", sans-serif;
+  /* ===== scoped variables (unique prefix) ===== */
+  :root{
+    --k3p-bg-1: #085a8d;
+    --k3p-bg-2: #064b70;
+    --k3p-gold: #f2b24a;
+    --k3p-white: #ffffff;
+    --k3p-card-shadow: 0 14px 34px rgba(3,12,22,0.18);
+    --k3p-radius: 14px;
+    --k3p-width: 1180px;
   }
 
-  .demo-container {
-    max-width: 1100px;
-    margin: auto;
+  /* outer */
+  .kraya3p-wrap{
+    position: relative;
+    background: linear-gradient(180deg, var(--k3p-bg-1) 0%, var(--k3p-bg-2) 100%);
+    padding: 54px 20px 92px;
+    color: var(--k3p-white);
+    overflow: hidden;
+    isolation: isolate;
   }
 
-  .demo-title {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 10px;
+  /* LEFT diagonal net (skewed panel) */
+  .kraya3p-wrap::before{
+    content:"";
+    position:absolute;
+    left:-20%;
+    top:-10%;
+    width:60%;
+    height:120%;
+    z-index:0;
+    pointer-events:none;
+    transform: skewY(-14deg) translateY(4%);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 48px);
+    background-size: 100% 48px, 100% 48px;
+    opacity:1;
   }
 
-  .demo-sub {
-    text-align: center;
-    font-size: 16px;
-    color: #4b5563;
-    margin-bottom: 35px;
+  /* RIGHT perspective strip inserted as DOM node for guaranteed visibility */
+  .kraya3p-right-panel{
+    position: absolute;
+    right: -16%;
+    top: -6%;
+    width: 32%;
+    height: 112%;
+    z-index: 0;
+    pointer-events: none;
+    transform: skewY(12deg) translateY(4%);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 48px);
+    background-size: 100% 48px, 100% 48px;
+    opacity:1;
   }
 
-  .demo-cards {
-    display: grid;
+  /* content container above background */
+  .kraya3p-inner{ position: relative; z-index: 2; max-width: var(--k3p-width); margin: 0 auto; }
+
+  .kraya3p-heading{ font-size: 30px; margin: 2px 0 6px; font-weight:800; line-height:1.02; color: var(--k3p-white); }
+  .kraya3p-gold{ color: var(--k3p-gold); }
+  .kraya3p-sub{ margin:0 0 26px; color: rgba(255,255,255,0.92); font-size:13px; }
+
+  /* ================= Stats (glass cards) ================= */
+  .kraya3p-stats{
+    display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
+    margin-bottom: 28px;
   }
+  @media (max-width: 980px){ .kraya3p-stats{ grid-template-columns: 1fr; } }
 
-  @media(max-width:900px){
-    .demo-cards { grid-template-columns: 1fr; }
-  }
-
-  .demo-card {
-    background: #ffffff; /* white card */
-    border-radius: 14px;
-    padding: 22px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-    transition: transform .25s ease, box-shadow .25s ease;
-    animation: fadeUp .4s ease both;
-  }
-
-  .demo-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.10);
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px);}
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Icon box */
-  .icon-box {
-    width: 58px;
-    height: 58px;
-    border-radius: 12px;
-    background: #f3f4f6;
+  .kraya3p-stat{
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+    border-radius: var(--k3p-radius);
+    padding: 24px;
+    min-height: 120px;
     display:flex;
-    justify-content:center;
     align-items:center;
-    margin-bottom: 16px;
+    justify-content:flex-start;
+    box-shadow: var(--k3p-card-shadow);
+    color: #0f2a33;
+    border: 1px solid rgba(6,24,46,0.04);
+    transform: translateY(18px);
+    opacity: 0;
+    transition: transform .6s cubic-bezier(.2,.9,.2,1), opacity .6s ease;
+    backdrop-filter: blur(4px);
+  }
+  .kraya3p-stat.kraya3p-visible{ transform: translateY(0); opacity:1; }
+
+  .kraya3p-stat-inner{ display:flex; flex-direction:column; gap:8px; }
+  .kraya3p-number{ font-size:48px; font-weight:900; letter-spacing: -1px; color: var(--k3p-gold); font-family: "Segoe UI", Roboto, system-ui; }
+  .kraya3p-stat:nth-child(2) .kraya3p-number{ color:#7d62c8; }
+  .kraya3p-stat:nth-child(3) .kraya3p-number{ color:#1aa38a; }
+
+  .kraya3p-label{ font-size:13px; font-weight:700; color:#0b2a31; }
+
+  /* subtle card hover lift on larger screens */
+  @media (hover:hover){
+    .kraya3p-stat:hover{ transform: translateY(-6px) scale(1.01); box-shadow: 0 28px 60px rgba(3,12,22,0.18); }
   }
 
-  .demo-card h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0 0 10px;
+  /* ================= Case study & badges ================= */
+  .kraya3p-case{
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+    border-radius: 12px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 18px;
+    align-items:center;
+    box-shadow: 0 20px 48px rgba(3,12,22,0.12);
+    border: 1px solid rgba(6,24,46,0.04);
+    transform: translateY(14px);
+    opacity:0;
+    transition: all .7s ease;
+  }
+  .kraya3p-case.kraya3p-visible{ transform: translateY(0); opacity:1; }
+  @media (max-width:980px){ .kraya3p-case{ grid-template-columns: 1fr; } }
+
+  .kraya3p-case-title{ font-family: "Brush Script MT", cursive; font-size:22px; color:#0b2a31; margin:0 0 8px; }
+  .kraya3p-case-text{ margin:0; color:#23494f; line-height:1.55; font-size:14px; }
+
+  .kraya3p-badges{ display:flex; gap:12px; justify-content:flex-end; flex-wrap:wrap; }
+  .kraya3p-badge{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    min-width:102px;
+    padding:10px 8px;
+    border-radius:10px;
+    background: linear-gradient(180deg, rgba(11,119,177,0.03), rgba(11,119,177,0));
+    border: 1px solid rgba(11,119,177,0.06);
+    color:#163a3f;
+    font-weight:800;
+    text-align:center;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .kraya3p-badge svg{ width:36px; height:36px; color:#0b78b1; }
+
+  @media (hover:hover){
+    .kraya3p-badge:hover{ transform: translateY(-6px); box-shadow: 0 12px 30px rgba(3,12,22,0.10); }
   }
 
-  .login-line {
-    padding: 10px 14px;
-    background: #f0f0f0;
-    border-radius: 8px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    border: 1px solid #dddddd;
-  }
-
-  .demo-btn {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 10px 16px;
-    background: #2563eb;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.25s;
-  }
-
-  .demo-btn:hover {
-    background: #1e40af;
+  /* small screens */
+  @media(max-width:420px){
+    .kraya3p-heading{ font-size:20px; }
+    .kraya3p-number{ font-size:36px; }
+    .kraya3p-case{ padding:14px; }
+    .kraya3p-badges{ justify-content:flex-start; }
   }
 </style>
 
+<script>
+  /* Reveal-on-scroll + count-up animation (self-contained) */
+  (function(){
+    const stats = Array.from(document.querySelectorAll('.kraya3p-stat'));
+    const caseBox = document.querySelector('.kraya3p-case');
+
+    // intersection observer for stats reveal
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          const el = entry.target;
+          if(!el.classList.contains('kraya3p-visible')){
+            el.classList.add('kraya3p-visible');
+            const numEl = el.querySelector('.kraya3p-number');
+            const target = parseFloat(el.getAttribute('data-target')) || 0;
+            const suffix = el.getAttribute('data-suffix') || '';
+            animateNumber(numEl, target, suffix);
+          }
+        }
+      });
+    }, {threshold: 0.36});
+
+    stats.forEach(s => statObserver.observe(s));
+
+    // reveal case block
+    if(caseBox){
+      const cObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if(e.isIntersecting){
+            caseBox.classList.add('kraya3p-visible');
+            obs.disconnect();
+          }
+        });
+      }, {threshold: 0.2});
+      cObserver.observe(caseBox);
+    }
+
+    // count-up function (easeOutCubic)
+    function animateNumber(el, target, suffix){
+      const start = 0;
+      const duration = 900 + Math.abs(target) * 18;
+      const startTime = performance.now();
+
+      function frame(now){
+        const t = Math.min(1, (now - startTime) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const value = Math.round(start + (target - start) * eased);
+        el.textContent = value + (suffix || '');
+        if(t < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+  })();
+</script>
+<!-- END: Kraya Results Section (Enhanced) -->
+<!-- START: SHAVYA AI - Features Section -->
+<section class="shavya-wrap" aria-labelledby="shavya-title">
+  <div class="shavya-inner">
+    <h2 id="shavya-title" class="shavya-head">
+      <span class="shavya-gold">Why Choose Shavya AI</span> for Lead Management?
+    </h2>
+
+    <div class="shavya-row">
+
+      <!-- LEFT: NUMBERED FEATURE LIST -->
+      <div class="shavya-left">
+        <ol class="shavya-list">
+          <li class="shavya-item">
+            <span class="shavya-num">1</span>
+            <div class="shavya-text">
+              <strong>Effortless Onboarding</strong>
+              <span>Start instantly with a simple, easy-to-use interface requiring zero training.</span>
+            </div>
+          </li>
+
+          <li class="shavya-item">
+            <span class="shavya-num">2</span>
+            <div class="shavya-text">
+              <strong>Built for WhatsApp</strong>
+              <span>Manage leads and conversations directly inside WhatsApp.</span>
+            </div>
+          </li>
+
+          <li class="shavya-item">
+            <span class="shavya-num">3</span>
+            <div class="shavya-text">
+              <strong>Automation-Driven</strong>
+              <span>Smart reminders, auto follow-ups, and workflow automation.</span>
+            </div>
+          </li>
+
+          <li class="shavya-item">
+            <span class="shavya-num">4</span>
+            <div class="shavya-text">
+              <strong>Affordable Pricing</strong>
+              <span>Enterprise-grade features at a highly affordable cost.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- RIGHT: ORBIT -->
+      <div class="shavya-right">
+        <div class="shavya-orbit" data-rotate="true">
+
+          <!-- Rings -->
+          <div class="shavya-ring ring-big"></div>
+          <div class="shavya-ring ring-small"></div>
+
+          <!-- CENTER BRAND -->
+          <div class="shavya-center">
+            <svg width="96" height="96" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="56" fill="#ffffff"/>
+              <text x="50%" y="50%" dominant-baseline="middle"
+                    text-anchor="middle" font-family="Segoe UI"
+                    font-size="16" fill="#0c5f8f" font-weight="700">Shavya</text>
+            </svg>
+          </div>
+
+          <!-- ORBIT ICONS (6) -->
+          <button class="shavya-icon pos1" data-tip="Messages">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 6h18v8H8l-5 4z" stroke="#087bb6" fill="none" stroke-width="1.6"/>
+            </svg>
+          </button>
+
+          <button class="shavya-icon pos2" data-tip="Contacts">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="3" stroke="#ff8c3f" fill="none" stroke-width="1.6"/>
+              <path d="M4 20c1-4 7-5 8-5s7 1 8 5" stroke="#ff8c3f" fill="none" stroke-width="1.6"/>
+            </svg>
+          </button>
+
+          <button class="shavya-icon pos3" data-tip="Calls">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 4l4 4" stroke="#9a6ad6" stroke-width="1.6"/>
+              <rect x="14" y="4" width="6" height="6" rx="1.5"
+                    stroke="#9a6ad6" fill="none" stroke-width="1.6"/>
+            </svg>
+          </button>
+
+          <button class="shavya-icon pos4" data-tip="Funnels">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6h16M8 12h8M10 18h4" stroke="#1aa38a" stroke-width="1.6"/>
+            </svg>
+          </button>
+
+          <button class="shavya-icon pos5" data-tip="Tasks">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 7h18M7 12h10M5 17h14" stroke="#ff9f3b" stroke-width="1.6"/>
+            </svg>
+          </button>
+
+          <button class="shavya-icon pos6" data-tip="Analytics">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="6" width="4" height="12" stroke="#0b9e75" fill="none" stroke-width="1.6"/>
+              <rect x="9" y="3" width="4" height="15" stroke="#0b9e75" fill="none" stroke-width="1.6"/>
+              <rect x="15" y="9" width="4" height="9" stroke="#0b9e75" fill="none" stroke-width="1.6"/>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="shavya-tooltip"></div>
+</section>
+
+<style>
+  :root{
+    --sh-white:#fff; --sh-blue:#0c5f8f; --sh-accent:#6fb9f3; --sh-ink:#0d2a32; --sh-muted:#6b7280;
+  }
+
+  .shavya-wrap{ background:#fff; padding:40px 16px; font-family:Inter,Segoe UI,Roboto,Arial; color:var(--sh-ink); }
+  .shavya-inner{ max-width:1180px; margin:auto; }
+  .shavya-head{ text-align:center; background:#0c4b63; color:#fff; padding:12px 24px; border-radius:6px; width:fit-content; margin:auto; font-weight:700; }
+  .shavya-gold{ color:var(--sh-accent); }
+
+  .shavya-row{ display:flex; gap:24px; justify-content:space-between; align-items:center; }
+  @media(max-width:980px){ .shavya-row{ flex-direction:column-reverse; } }
+
+  /* LEFT LIST */
+  .shavya-left{ flex:1 1 56%; }
+  .shavya-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:18px; }
+  .shavya-item{ display:flex; gap:14px; align-items:flex-start; }
+
+  .shavya-num{
+    width:52px; height:52px; border-radius:50%; background:#ffffff;
+    border:2px solid var(--sh-accent); display:flex; justify-content:center;
+    align-items:center; font-weight:700; font-size:18px; color:var(--sh-blue);
+    box-shadow:0 8px 22px rgba(12,95,143,0.08);
+  }
+
+  .shavya-text strong{ font-size:15px; display:block; margin-bottom:6px; }
+  .shavya-text span{ color:var(--sh-muted); font-size:13px; line-height:1.45; }
+
+  /* ORBIT */
+  .shavya-right{ width:420px; display:flex; justify-content:center; }
+  @media(max-width:980px){ .shavya-right{ width:100%; margin-bottom:16px; } }
+
+  .shavya-orbit{ width:340px; height:340px; position:relative; }
+  .shavya-ring{ position:absolute; inset:0; border:1px solid rgba(12,95,143,0.06); border-radius:50%; }
+  .ring-small{ transform:scale(0.6); }
+
+  .shavya-center{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:96px; height:96px; background:#fff; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 30px rgba(12,95,143,0.08);
+  }
+
+  /* ICON TILES */
+  .shavya-icon{
+    position:absolute; width:64px; height:64px; border-radius:12px;
+    background:white; border:1px solid rgba(12,95,143,0.06);
+    box-shadow:0 12px 30px rgba(12,95,143,0.08);
+    display:flex; align-items:center; justify-content:center;
+    transition:.18s ease; cursor:pointer;
+  }
+  .shavya-icon:hover{ transform:translateY(-8px) scale(1.03); box-shadow:0 26px 60px rgba(12,95,143,0.14); }
+  .shavya-icon svg{ width:28px; height:28px; }
+
+  /* Icon positions around circle */
+  .pos1{ left:50%; top:4%; transform:translateX(-50%); }
+  .pos2{ right:6%; top:22%; }
+  .pos3{ right:10%; bottom:24%; }
+  .pos4{ left:50%; bottom:4%; transform:translateX(-50%); }
+  .pos5{ left:6%; bottom:22%; }
+  .pos6{ left:10%; top:22%; }
+
+  /* TOOLTIP */
+  #shavya-tooltip{
+    position:fixed; padding:8px 10px; background:#0b3b53; color:white;
+    font-size:13px; border-radius:6px; opacity:0; pointer-events:none;
+    transform:translate(-50%, -14px); transition:.13s;
+    z-index:9999;
+  }
+</style>
+
+<script>
+(function(){
+  const tip = document.getElementById('shavya-tooltip');
+
+  // Tooltip logic
+  function showTip(text,x,y){ tip.textContent=text; tip.style.left=x+'px'; tip.style.top=y-18+'px'; tip.style.opacity=1; }
+  function hideTip(){ tip.style.opacity=0; }
+
+  document.querySelectorAll('.shavya-icon').forEach(ic=>{
+    ic.addEventListener('mouseenter', e=>showTip(ic.dataset.tip, e.clientX, e.clientY));
+    ic.addEventListener('mousemove', e=>showTip(ic.dataset.tip, e.clientX, e.clientY));
+    ic.addEventListener('mouseleave', hideTip);
+  });
+
+  // Optional: rotate orbit icons smoothly
+  const orbit=document.querySelector('.shavya-orbit');
+  if(orbit.dataset.rotate==="true"){
+    const icons=[...document.querySelectorAll('.shavya-icon')];
+    let angle=0;
+
+    function rotate(){
+      const size=orbit.clientWidth;
+      const cx=size/2, cy=size/2, r=size/2-46;
+      angle+=0.28;
+
+      icons.forEach((ic,i)=>{
+        const base=(i/icons.length)*Math.PI*2;
+        const a=base + angle * 0.01745;
+        const x=cx + r*Math.cos(a) - ic.offsetWidth/2;
+        const y=cy + r*Math.sin(a) - ic.offsetHeight/2;
+        ic.style.left=x+"px";
+        ic.style.top=y+"px";
+      });
+
+      requestAnimationFrame(rotate);
+    }
+
+    rotate();
+  }
+})();
+</script>
+<!-- END: SHAVYA AI - Features Section -->
+
+
+
+<!-- Results SectionEnd  -->
+
+
+<!-- ====================== SaaS Demo Login Access Section ====================== -->
 <section class="demo-login-section">
   <div class="demo-container">
 
@@ -281,10 +695,172 @@
 </section>
 
 <!-- ====================== End of SaaS Demo Login Access Section ====================== -->
+<!-- FEATURE SECTION -->
+  <section class="crm-diff-section">
+    <div class="crm-diff-container">
+      <h2 class="crm-diff-heading">
+        What Makes <span class="brand">Kraya's CRM</span> Different?
+      </h2>
 
- <!-- ======== feature-section start ======== -->
-    <!-- ======== feature-section (colorful, animated, improved UI) start ======== -->
-<section id="features" class="feature-section pt-120">
+      <div class="crm-diff-grid">
+        <!-- Card 1 -->
+        <article class="crm-card">
+          <div class="crm-card-icon">
+            <!-- Simple people icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="8" cy="8" r="3"></circle>
+              <circle cx="16" cy="8" r="3"></circle>
+              <path d="M4 18c0-2.2 1.8-4 4-4s4 1.8 4 4"></path>
+              <path d="M12 18c0-2.2 1.8-4 4-4s4 1.8 4 4"></path>
+            </svg>
+          </div>
+          <h3 class="crm-card-title">Effortless Usability</h3>
+          <p class="crm-card-text">
+            No steep learning curves – your team can start using it right away.
+          </p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="crm-card">
+          <div class="crm-card-icon">
+            <!-- Folder / data icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 7h6l2 2h10v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"></path>
+              <path d="M3 7V5a2 2 0 0 1 2-2h4l2 2h5"></path>
+            </svg>
+          </div>
+          <h3 class="crm-card-title">Minimal Data Entry</h3>
+          <p class="crm-card-text">
+            Click and record data on the go, saving the time and manual efforts
+            of sales teams.
+          </p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="crm-card">
+          <div class="crm-card-icon">
+            <!-- Chat bubble icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 5h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-5l-4 3v-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"
+              ></path>
+              <path d="M9 11h6"></path>
+              <path d="M9 8h3"></path>
+            </svg>
+          </div>
+          <h3 class="crm-card-title">WhatsApp-Based</h3>
+          <p class="crm-card-text">
+            Manage all your leads right from WhatsApp, where your customers
+            already are.
+          </p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="crm-card">
+          <div class="crm-card-icon">
+            <!-- Gear / automation icon -->
+            <svg viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a1 1 0 0 1-0.2 1.5l-1.2.7a1 1 0 0 1-1.2-0.1l-0.3-0.3a1 1 0 0 0-1.1-0.2 1 1 0 0 0-.6.7l-.1.4a1 1 0 0 1-1 .8H11a1 1 0 0 1-1-.8l-.1-.4a1 1 0 0 0-.6-.7 1 1 0 0 0-1.1.2l-.3.3a1 1 0 0 1-1.2.1l-1.2-.7a1 1 0 0 1-.2-1.5l.1-.1a1 1 0 0 0 .2-1.1 1 1 0 0 0-.7-.6l-.4-.1a1 1 0 0 1-.8-1V10a1 1 0 0 1 .8-1l.4-.1a1 1 0 0 0 .7-.6 1 1 0 0 0-.2-1.1l-.1-.1a1 1 0 0 1 .2-1.5l1.2-.7a1 1 0 0 1 1.2.1l.3.3a1 1 0 0 0 1.1.2 1 1 0 0 0 .6-.7L11 3.9A1 1 0 0 1 12 3h1a1 1 0 0 1 1 .8l.1.4a1 1 0 0 0 .6.7 1 1 0 0 0 1.1-.2l.3-.3a1 1 0 0 1 1.2-.1l1.2.7a1 1 0 0 1 .2 1.5l-.1.1a1 1 0 0 0-.2 1.1 1 1 0 0 0 .7.6l.4.1a1 1 0 0 1 .8 1v1a1 1 0 0 1-.8 1l-.4.1a1 1 0 0 0-.7.6z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="crm-card-title">Smart Automation</h3>
+          <p class="crm-card-text">
+            Never miss a follow-up with automated reminders and task
+            management.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+ <!-- ======== feature-section End======== -->
+
+<section class="krfail-wrapper">
+    
+    <h2 class="krfail-title">
+        Why <span>Traditional CRMs</span> Fail Sales Teams
+    </h2>
+
+    <p class="krfail-subtitle">
+        Most CRMs are designed with complexity in mind, leading to inefficiencies such as:
+    </p>
+
+    <div class="krfail-grid">
+
+        <!-- Card 1 -->
+        <div class="krfail-card">
+            <div class="krfail-icon">
+                <!-- Diagram Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0b63b8" stroke-width="2" stroke-linecap="round">
+                    <rect x="3" y="3" width="6" height="6" rx="1.5" />
+                    <rect x="15" y="3" width="6" height="6" rx="1.5" />
+                    <rect x="3" y="15" width="6" height="6" rx="1.5" />
+                    <rect x="15" y="15" width="6" height="6" rx="1.5" />
+                </svg>
+            </div>
+            <div>
+                <h3 class="krfail-card-title">Complicated Interfaces</h3>
+                <p class="krfail-card-desc">Overwhelming dashboards that require extensive training.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="krfail-card">
+            <div class="krfail-icon">
+                <!-- Hourglass Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0b63b8" stroke-width="2" stroke-linecap="round">
+                    <path d="M6 2h12M6 22h12" />
+                    <path d="M7 2v5c0 2 2 3 5 3s5-1 5-3V2" />
+                    <path d="M17 22v-5c0-2-2-3-5-3s-5 1-5 3v5" />
+                </svg>
+            </div>
+            <div>
+                <h3 class="krfail-card-title">Time-Consuming Data Entry</h3>
+                <p class="krfail-card-desc">Sales reps spend more time updating CRM records than selling.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="krfail-card">
+            <div class="krfail-icon">
+                <!-- Chat Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0b63b8" stroke-width="2" stroke-linecap="round">
+                    <path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-5 4V5z" />
+                </svg>
+            </div>
+            <div>
+                <h3 class="krfail-card-title">Disjointed Communication</h3>
+                <p class="krfail-card-desc">Lack of integration causes scattered conversations.</p>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="krfail-card">
+            <div class="krfail-icon">
+                <!-- Chart Down Icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0b63b8" stroke-width="2" stroke-linecap="round">
+                    <path d="M3 3v18h18" />
+                    <path d="M7 14l4-5 4 5 4-9" />
+                </svg>
+            </div>
+            <div>
+                <h3 class="krfail-card-title">Low Adoption Rates</h3>
+                <p class="krfail-card-desc">Teams resist tools that slow down their daily workflow.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="krfail-bottom-box">
+        Kraya AI simplifies lead management by centralizing everything in one easy-to-use interface
+    </div>
+
+</section>
+
+    <!-- ======== feature-section function   (colorful, animated, improved UI) start ======== -->
+<section id="features" class="feature-section pt-10">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -692,195 +1268,29 @@
         </div>
       </div>
     </section>
-    <!-- ======== about2-section end ======== -->
+<!-- ===========================
+       CTA SECTION (Shavya AI)
+=========================== -->
+<section class="shavya-cta">
+  <div class="shavya-cta-inner">
 
-    <!-- ========================= Infographic Section ========================= -->
-<!-- ================= Login System Process — infographic-style section ================= -->
-<section id="login-process" aria-labelledby="login-process-title" style="padding:40px 12px; background:#394a5f;">
-  <div class="lp-container" style="max-width:760px; margin:0 auto; color:#fff; font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;">
-    <div style="text-align:center; margin-bottom:20px;">
-      <h2 id="login-process-title" style="font-weight:800; letter-spacing:1px; margin:0 0 6px; color:#f8fafc; font-size:26px;">
-        LOGIN & ACCESS PROCESS (SHVYA INVENTORY)
-      </h2>
-      <p style="margin:0; color:#d1d8de; font-size:14px; max-width:720px; margin-left:auto; margin-right:auto;">
-        Step-by-step authentication and role checks to secure access to inventory, invoices and POS modules.
-      </p>
+    <div class="shavya-cta-top">Take The Next Step</div>
+
+    <h1 class="shavya-cta-head">
+      Simplify Your Lead Management With <strong>Shavya AI-CRM</strong> And Watch Your Sales Efficiency Soar
+    </h1>
+
+    <p class="shavya-cta-sub">
+      Book a Demo Today to experience the world’s simplest CRM first-hand.
+    </p>
+
+    <div class="shavya-btn-wrap">
+      <button class="shavya-btn">Book A Free Demo</button>
     </div>
 
-    <div class="lp-flow" style="position:relative; padding:18px 8px 36px;">
-      <!-- steps unchanged structurally; copy tailored above in feature list -->
-      <div class="lp-step" data-step="1">
-        <div class="lp-badge" aria-hidden="true">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#10b981"/><path d="M7.5 12.5l2.5 2.5L16.5 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>1. User Opens Login Page</h4>
-          <p>Landing page or app login screen (email/username input visible, “Forgot?”, 3rd-party login buttons).</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="2">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#06b6d4"/><path d="M8 12h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>2. Credential Submission</h4>
-          <p>Client securely submits credentials (POST to /auth). Use HTTPS, input validation and rate-limits.</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="3">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#6366f1"/><path d="M9 12c.8-1.6 2.6-2.5 4-2.5s3.2.9 4 2.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>3. Authenticate Credentials</h4>
-          <p>Server checks hashed password or token. If using OAuth/OIDC, validate third-party tokens.</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="4">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#ef4444"/><path d="M8 12h8M8 16h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>4. Multi-Factor / Risk Checks</h4>
-          <p>Trigger 2FA (TOTP/SMS/Email) or device/risk checks. Block or require verification when suspicious.</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="5">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#7c3aed"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>5. Role & Permission Check</h4>
-          <p>Map user to roles (admin, sales, user). Evaluate permissions for modules: Inventory, POS, Invoices, Reports.</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="6">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#06b6d4"/><path d="M7 12h10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>6. Session / Token Creation</h4>
-          <p>Create session cookie or sign JWT (short expiry). Secure flags, HttpOnly, SameSite; refresh token strategy.</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="7">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#10b981"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>7. Access Granted</h4>
-          <p>User redirected to dashboard / module (Inventory / POS / Sales) with UI tailored to permissions.</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="8">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#f59e0b"/><path d="M8 12h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>8. Logging & Monitoring</h4>
-          <p>Record login events, IP, device, and auth failures. Monitor suspicious activity and alert as needed.</p>
-        </div>
-      </div>
-
-      <div class="lp-step" data-step="9">
-        <div class="lp-badge">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#0ea5a4"/><path d="M8 12h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <div class="lp-card">
-          <h4>9. Logout / Session Revoke</h4>
-          <p>Clear session and revoke refresh tokens. Optionally force global logout on credential changes.</p>
-        </div>
-      </div>
-
-    </div> <!-- .lp-flow -->
   </div>
-
-  <!-- ================= Scoped styles (keeps it self-contained) ================= -->
-  <style>
-    /* layout */
-    #login-process .lp-flow { display:flex; flex-direction:column; gap:26px; position:relative; }
-    #login-process .lp-step { display:flex; align-items:flex-start; gap:14px; position:relative; z-index:2; }
-    #login-process .lp-badge { flex:0 0 54px; width:54px; height:54px; border-radius:10px; display:flex; align-items:center; justify-content:center; box-shadow: 0 12px 30px rgba(2,6,23,0.18); }
-    #login-process .lp-card { background:#e9eef2; color:#112030; padding:14px 16px; border-radius:8px; box-shadow: 0 10px 28px rgba(2,6,23,0.06); flex:1; min-height:72px; }
-    #login-process .lp-card h4 { margin:0 0 6px; font-size:15px; font-weight:700; color:#0f172a; }
-    #login-process .lp-card p { margin:0; font-size:13px; color:#475569; line-height:1.45; }
-
-    /* connectors: vertical bar + small L-shape per step to mimic flow */
-    #login-process .lp-step::after {
-      content: "";
-      position: absolute;
-      left: 28px;                 /* around center of badge */
-      top: calc(100% + 2px);
-      width: 6px;
-      height: 22px;
-      background: linear-gradient(180deg,#cfe6f0,#dfeef6);
-      border-radius:4px;
-      z-index:1;
-      opacity:0.95;
-    }
-    /* remove connector on last */
-    #login-process .lp-step:last-child::after { display:none; }
-
-    /* small horizontal connector from badge to card for visual */
-    #login-process .lp-step::before {
-      content: "";
-      position:absolute;
-      left:62px; top:18px;
-      width:18px; height:6px;
-      background: linear-gradient(90deg,#cfe6f0,#dfeef6);
-      border-radius:4px;
-      z-index:1;
-      opacity:.95;
-    }
-
-    /* reveal animation */
-    #login-process .lp-step { opacity:0; transform:translateY(12px); transition: all .48s cubic-bezier(.2,.9,.3,1); }
-    #login-process .lp-step.in-view { opacity:1; transform:none; }
-
-    /* responsive */
-    @media (max-width:820px) {
-      #login-process .lp-step { gap:10px; }
-      #login-process .lp-badge { width:48px; height:48px; }
-      #login-process .lp-step::after { left:24px; height:18px; }
-      #login-process .lp-step::before { left:56px; width:14px; height:6px; top:16px; }
-      #login-process .lp-container { padding-left:12px; padding-right:12px; }
-    }
-
-    @media (max-width:480px) {
-      #login-process .lp-step { flex-direction:row; align-items:flex-start; }
-      #login-process .lp-badge { flex:0 0 46px; width:46px; height:46px; }
-      #login-process .lp-card { padding:12px; font-size:13px; }
-    }
-  </style>
-
-  <!-- ================= Minimal reveal JS ================= -->
-  <script>
-    (function(){
-      const steps = Array.from(document.querySelectorAll('#login-process .lp-step'));
-      const obs = new IntersectionObserver((entries, o) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('in-view');
-            o.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.16 });
-
-      steps.forEach(s => obs.observe(s));
-    })();
-  </script>
 </section>
-<!-- ================= End Login System Process section ================= -->
-
-<!-- ======================= End Infographic Section ======================= -->
-
+    <!-- ======== about2-section end ======== -->
 <!-- === Live WhatsApp Sales Popup (All-in-one Code with Your Number) === -->
 <style>
   /* Floating WhatsApp Button */

@@ -95,3 +95,42 @@
   // WOW active
   new WOW().init();
 })();
+
+
+// Simple fade-in on scroll using Intersection Observer
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".crm-card");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      cards.forEach((card) => observer.observe(card));
+    });
+
+
+
+    // 888888888888888888888888888888
+     // Lightweight keyboard/activation behavior:
+    document.querySelectorAll('.feature-card').forEach(card=>{
+      card.addEventListener('keydown', e=>{
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          card.classList.add('focus-activated');
+          setTimeout(()=>card.classList.remove('focus-activated'),300);
+        }
+      });
+    });
+
+    // Result section
+
+
+    
