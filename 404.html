@@ -4,292 +4,135 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Refund Policy — AlmostZero</title>
-
   <style>
-    /* Simple, modern, attractive styling */
+    /* Minimal, clean styling */
     :root{
-      --bg: #f6f9fc;
-      --card: #ffffff;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --accent-2: #7dd3fc;
-      --radius: 14px;
-      --container: 980px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color-scheme: light;
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#1e3a8a;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      min-height:100%;
-      background: linear-gradient(180deg, #eef7ff 0%, var(--bg) 70%);
+      min-height:100vh;
+      background:linear-gradient(180deg, #eef6ff 0%, var(--bg) 60%);
+      color:#0f1724;
       display:flex;
       align-items:center;
       justify-content:center;
       padding:28px;
       -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      color:#0f1724;
     }
 
-    .wrapper{
+    .container{
       width:100%;
-      max-width:var(--container);
-      display:grid;
-      grid-template-columns: 1fr 360px;
-      gap:28px;
-      align-items:start;
-    }
-
-    @media (max-width:880px){
-      .wrapper{grid-template-columns:1fr;padding:0 12px}
+      max-width:900px;
+      padding:28px;
     }
 
     .card{
       background:var(--card);
       border-radius:var(--radius);
-      padding:26px;
-      box-shadow: 0 10px 30px rgba(16,24,40,0.06);
-      border: 1px solid rgba(15, 23, 42, 0.04);
+      padding:28px;
+      box-shadow: 0 8px 30px rgba(14,30,60,0.06);
+      border:1px solid rgba(2,6,23,0.04);
     }
 
-    header.page-header{
-      display:flex;
-      gap:16px;
-      align-items:center;
-      margin-bottom:12px;
+    header{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+    .logo {
+      width:56px;height:56px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#60a5fa);
+      color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:18px;
     }
-
-    .brand{
-      width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      color:white;font-weight:700;font-size:20px;box-shadow:0 8px 22px rgba(37,99,235,0.12);
-    }
-
     h1{font-size:20px;margin:0}
-    p.lead{margin:8px 0 0 0;color:var(--muted);font-size:14px}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:14px}
 
-    /* Policy sections */
-    .section{
-      margin-top:18px;
-      padding-top:6px;
-      border-top:1px dashed rgba(15,23,42,0.03);
+    hr {border:none;border-top:1px solid rgba(2,6,23,0.04);margin:20px 0;border-radius:4px}
+
+    section h2{font-size:15px;margin:10px 0 6px}
+    section p{color:var(--muted);margin:6px 0;line-height:1.6;font-size:14px}
+    ul.simple{margin:8px 0 0 18px;color:var(--muted)}
+    ul.simple li{margin:8px 0}
+
+    .meta{display:flex;gap:12px;align-items:center;margin-top:14px}
+    .meta .label{font-weight:700}
+    .footer-note{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:640px){
+      .container{padding:12px}
+      .card{padding:18px}
     }
-    .section h2{font-size:16px;margin:8px 0}
-    .section p{color:var(--muted);margin:8px 0;font-size:14px;line-height:1.55}
-
-    ul.bullets{padding-left:18px;color:var(--muted);margin:6px 0}
-    ul.bullets li{margin:8px 0}
-
-    /* Right column */
-    .aside{
-      position:sticky;
-      top:28px;
-      height:fit-content;
-    }
-    .aside .panel{
-      padding:18px;
-      border-radius:12px;
-      background:linear-gradient(180deg,#ffffff, #fbfdff);
-      box-shadow:0 8px 20px rgba(2,6,23,0.04);
-      border:1px solid rgba(15,23,42,0.03);
-    }
-
-    .meta-row{display:flex;gap:10px;align-items:center;margin-bottom:10px}
-    .meta-row svg{flex:0 0 20px}
-    .muted{color:var(--muted);font-size:13px}
-
-    .cta{
-      display:flex;gap:10px;margin-top:12px;
-    }
-    .btn{
-      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600;
-      box-shadow: 0 8px 18px rgba(37,99,235,0.08);
-    }
-    .btn.primary{background:var(--accent);color:white}
-    .btn.ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--muted)}
-    .small{font-size:13px;color:var(--muted)}
-
-    /* FAQ toggles */
-    .faq-item{border-radius:10px;padding:10px;margin-top:8px;border:1px solid rgba(15,23,42,0.03);background:linear-gradient(180deg, #ffffff, #fbfdff)}
-    .faq-question{display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:12px}
-    .faq-question h3{font-size:14px;margin:0}
-    .faq-answer{margin-top:8px;color:var(--muted);font-size:14px;display:none}
-
-    footer{margin-top:18px;font-size:13px;color:var(--muted)}
-    .note{font-size:13px;color:var(--muted);margin-top:10px}
   </style>
 </head>
 <body>
-  <div class="wrapper" role="main">
-    <!-- Main content -->
-    <div class="card" aria-labelledby="pageTitle">
-      <header class="page-header">
-        <div class="brand" aria-hidden="true">AZ</div>
+  <div class="container">
+    <article class="card" role="article" aria-labelledby="title">
+      <header>
+        <div class="logo" aria-hidden="true">AZ</div>
         <div>
-          <h1 id="pageTitle">Refund Policy</h1>
-          <p class="lead">Clear, fair and easy — this policy explains when refunds are possible and how to request one.</p>
+          <h1 id="title">Refund Policy</h1>
+          <p class="lead">This page explains when refunds are available and how they are processed.</p>
         </div>
       </header>
 
-      <section class="section" aria-labelledby="introTitle">
-        <h2 id="introTitle">Overview</h2>
-        <p>AlmostZero (the “Company”) wants you to be satisfied with your purchase. This Refund Policy explains when refunds are available, how to request one, and what to expect when you do.</p>
+      <section aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <p>AlmostZero (the "Company") aims for customer satisfaction. This Refund Policy outlines the circumstances under which refunds are given, and how you can request one.</p>
       </section>
 
-      <section class="section" aria-labelledby="eligTitle">
-        <h2 id="eligTitle">Eligibility for Refunds</h2>
-        <p>Refunds may be issued if one of the following applies:</p>
-        <ul class="bullets">
-          <li>You purchased a product or service and it was not delivered as described.</li>
-          <li>A charge was made in error or duplicated.</li>
-          <li>You cancelled within the allowed cancellation window stated during purchase.</li>
+      <hr />
+
+      <section aria-labelledby="eligibility">
+        <h2 id="eligibility">Eligibility</h2>
+        <p>Refunds may be issued in the following situations:</p>
+        <ul class="simple">
+          <li>The purchased product or service was not delivered as described.</li>
+          <li>A duplicate or erroneous charge was made.</li>
+          <li>Cancellation within the allowed window stated during purchase.</li>
         </ul>
-        <p class="small"><strong>Timeframes:</strong> For digital products, refund requests must be submitted within <strong>14 days</strong> of purchase unless otherwise stated. For physical goods, the return window is <strong>30 days</strong> from delivery.</p>
+        <p><strong>Timeframes:</strong> For digital goods, requests must be made within <strong>14 days</strong> of purchase unless otherwise specified. For physical goods, returns must be initiated within <strong>30 days</strong> of delivery.</p>
       </section>
 
-      <section class="section" aria-labelledby="exceptionsTitle">
-        <h2 id="exceptionsTitle">Exceptions & Non-Refundable Items</h2>
-        <p>The following are typically non-refundable:</p>
-        <ul class="bullets">
-          <li>Services completed and delivered in full with customer approval.</li>
-          <li>Products or content explicitly marked non-refundable at time of purchase.</li>
-          <li>Charges for late fees, interest, or third-party services unrelated to the Company.</li>
+      <hr />
+
+      <section aria-labelledby="exceptions">
+        <h2 id="exceptions">Exceptions</h2>
+        <p>The following are generally non-refundable:</p>
+        <ul class="simple">
+          <li>Services fully completed with customer approval.</li>
+          <li>Items explicitly marked non-refundable at purchase.</li>
+          <li>Fees charged by third parties or for late payments.</li>
         </ul>
       </section>
 
-      <section class="section" aria-labelledby="processTitle">
-        <h2 id="processTitle">How to Request a Refund</h2>
-        <p>To request a refund, please:</p>
-        <ol class="bullets" style="list-style-type:decimal;">
-          <li>Contact our support team at <strong id="contactEmail">support@almostzero.io</strong> (or use the Request Refund button in the panel).</li>
-          <li>Provide your order number, purchase date, and a brief reason for the request.</li>
-          <li>Attach any supporting screenshots or documents that help explain the issue.</li>
-        </ol>
-        <p>Once we receive your request, we will review and respond within <strong>5 business days</strong>. If approved, refunds are issued to the original payment method and may take 5–10 business days to appear on your statement.</p>
+      <hr />
+
+      <section aria-labelledby="process">
+        <h2 id="process">How to Request a Refund</h2>
+        <p>To request a refund, please contact our support team with the following details:</p>
+        <ul class="simple">
+          <li>Order or invoice number</li>
+          <li>Purchase date</li>
+          <li>Reason for the refund request and any supporting evidence (screenshots, receipts)</li>
+        </ul>
+        <p>We will review requests and respond within <strong>5 business days</strong>. If approved, refunds will be issued to the original payment method and may take several business days to appear on your statement.</p>
       </section>
 
-      <section class="section" aria-labelledby="faqTitle">
-        <h2 id="faqTitle">Frequently Asked Questions</h2>
+      <hr />
 
-        <div class="faq-item">
-          <div class="faq-question" data-toggle>
-            <h3>What if I can't find my order number?</h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#374151" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="faq-answer">If you can’t find your order number, provide the email used during purchase and approximate purchase date — our team will help locate it.</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question" data-toggle>
-            <h3>How long until I receive my refund?</h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#374151" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="faq-answer">After approval, refunds are processed within 5–10 business days depending on your bank or payment provider.</div>
-        </div>
-
+      <section aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p>Please contact our support at: <strong>support@almostzero.io</strong> for refund requests or questions.</p>
       </section>
 
-      <footer>
-        <div class="note">Effective date: <strong id="effectiveDate">November 16, 2025</strong>. This policy may be updated — check this page for the latest version.</div>
-      </footer>
-    </div>
-
-    <!-- Right column / aside -->
-    <aside class="aside">
-      <div class="panel">
-        <div class="meta-row">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v6" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 8v3a6 6 0 0 0 12 0V8" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div>
-            <div style="font-weight:700">Need help with a refund?</div>
-            <div class="muted">We're here to assist.</div>
-          </div>
-        </div>
-
-        <div class="meta-row" style="margin-top:6px">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8v6a2 2 0 0 1-2 2h-4" stroke="#0f1724" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12v-2a2 2 0 0 1 2-2h4" stroke="#0f1724" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div class="muted">Typical response time: <strong>5 business days</strong></div>
-        </div>
-
-        <div class="cta">
-          <button class="btn primary" id="requestRefundBtn" title="Request a refund">Request Refund</button>
-          <button class="btn ghost" id="contactBtn" title="Contact support">Contact</button>
-        </div>
-
-        <div class="small" style="margin-top:12px">You can also email: <strong id="emailText">support@almostzero.io</strong></div>
-
-        <div style="height:1px;background:transparent;margin-top:12px"></div>
-
-        <div style="margin-top:12px">
-          <strong style="display:block;margin-bottom:6px">Quick tips</strong>
-          <ul class="bullets">
-            <li>Always include your order number or invoice.</li>
-            <li>Attach screenshots that show the issue.</li>
-            <li>Be clear about the resolution you want (refund, replacement, credit).</li>
-          </ul>
-        </div>
+      <div class="footer-note">
+        Effective date: <strong>November 16, 2025</strong>. This policy may be updated periodically; please check this page for the latest version.
       </div>
-    </aside>
+    </article>
   </div>
-
-  <script>
-    // --------------------------
-    // Basic behavior + customization
-    // --------------------------
-    (function(){
-      // === Customize these ===
-      const companyName = "AlmostZero";
-      const contactEmail = "support@almostzero.io";
-      const effectiveDate = "November 16, 2025";
-      // ========================
-
-      // Insert values into page
-      document.getElementById('contactEmail').textContent = contactEmail;
-      document.getElementById('emailText').textContent = contactEmail;
-      document.getElementById('effectiveDate').textContent = effectiveDate;
-
-      // Buttons
-      const requestBtn = document.getElementById('requestRefundBtn');
-      const contactBtn = document.getElementById('contactBtn');
-
-      requestBtn.addEventListener('click', () => {
-        const subject = encodeURIComponent(`${companyName} Refund Request`);
-        const body = encodeURIComponent(
-          "Please provide the following:\n\n" +
-          "- Order / Invoice number:\n" +
-          "- Purchase date:\n" +
-          "- Reason for refund:\n\n" +
-          "Attach any supporting screenshots or receipts.\n\nThank you."
-        );
-        window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
-      });
-
-      contactBtn.addEventListener('click', () => {
-        window.location.href = `mailto:${contactEmail}`;
-      });
-
-      // FAQ toggle
-      document.querySelectorAll('[data-toggle]').forEach(function(el){
-        el.addEventListener('click', function(){
-          const answer = this.nextElementSibling;
-          if(!answer) return;
-          const isOpen = answer.style.display === 'block';
-          // close any other answer (optional)
-          document.querySelectorAll('.faq-answer').forEach(a => { if (a !== answer) a.style.display = 'none'; });
-          answer.style.display = isOpen ? 'none' : 'block';
-        });
-      });
-
-      // Accessibility: allow keyboard toggle on Enter/Space
-      document.querySelectorAll('[data-toggle]').forEach(function(el){
-        el.tabIndex = 0;
-        el.addEventListener('keydown', function(e){
-          if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.click(); }
-        });
-      });
-
-    })();
-  </script>
 </body>
 </html>
