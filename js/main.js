@@ -648,3 +648,127 @@ window.addEventListener('resize', ()=> {
   document.getElementById('demoBtn').addEventListener('click', () => {
     alert('Demo request — integrate this with your modal or form.');
   });
+
+
+
+
+//  about page start 
+
+
+// Enhanced JS: floating animation + subtle parallax that's mobile-safe.
+    (function () {
+      const root = document.querySelector('.dinesh-hero');
+      const visual = root.querySelector('.dinesh-hero__visual');
+      const cubes = Array.from(root.querySelectorAll('.dinesh-hero__cube'));
+
+      // Apply float animation with different durations/delays
+      cubes.forEach((c, idx) => {
+        const dur = 3.6 + idx * 0.9; // seconds
+        const delay = (idx * 0.2) + Math.random() * 0.6;
+        c.style.animation = `dinesh-float ${dur}s ease-in-out ${delay}s infinite`;
+        c.style.animationTimingFunction = 'cubic-bezier(.4,0,.2,1)';
+      });
+
+      // Parallax on pointer move — disable heavy pointer effects on small screens
+      const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+      if (!isTouch) {
+        root.addEventListener('pointermove', (ev) => {
+          const rect = root.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (ev.clientX - cx) / rect.width;
+          const dy = (ev.clientY - cy) / rect.height;
+
+          // Each cube moves different amount and rotates slightly for depth
+          cubes.forEach((c, i) => {
+            const move = 10 + i * 6;
+            const rot = (dx * 6) - (i * 1.2);
+            c.style.transform = `translate3d(${dx * move}px, ${dy * move}px, 0) rotate(${rot}deg)`;
+          });
+        });
+
+        root.addEventListener('pointerleave', () => {
+          cubes.forEach((c) => c.style.transform = '');
+        });
+      } else {
+        // On touch devices: keep only float animation — no parallax
+        root.style.touchAction = 'manipulation';
+      }
+
+      // Accessibility: keyboard focus effect already enabled by :focus CSS
+      // Add small keyboard control to cycle focus between cubes using left/right keys
+      let focusedIndex = -1;
+      root.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          if (focusedIndex === -1) {
+            focusedIndex = 0;
+          } else {
+            focusedIndex = (e.key === 'ArrowRight') ? Math.min(focusedIndex + 1, cubes.length - 1) : Math.max(focusedIndex - 1, 0);
+          }
+          cubes[focusedIndex].focus();
+        }
+      });
+    })();
+
+
+    // Product Page start 
+    // Scoped JS — only works with #shv-animals wrapper
+  (function(){
+    // create modal (unique id)
+    let modal = document.createElement('div');
+    modal.id = 'shv-animals-modal';
+    modal.setAttribute('data-open','false');
+    modal.innerHTML = `
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="shv-modal-title">
+        <h3 id="shv-modal-title">Title</h3>
+        <p id="shv-modal-body">Details</p>
+        <div style="display:flex;justify-content:flex-end;margin-top:12px">
+          <button class="modal-close" id="shv-modal-close">Close</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // close handlers
+    document.getElementById('shv-modal-close').addEventListener('click', ()=> {
+      modal.setAttribute('data-open','false');
+    });
+    modal.addEventListener('click', (e)=>{
+      if(e.target === modal) modal.setAttribute('data-open','false');
+    });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape' && modal.getAttribute('data-open') === 'true') modal.setAttribute('data-open','false');
+    });
+
+    // attach click to all animal buttons inside the wrapper
+    const wrapper = document.getElementById('shv-animals');
+    if(!wrapper) return;
+    wrapper.querySelectorAll('[data-animal-open]').forEach(btn => {
+      btn.addEventListener('click', (ev)=>{
+        const card = btn.closest('[data-animal-card]');
+        const title = card?.getAttribute('data-animal-card') || 'Details';
+        const inner = card?.querySelector('[class$="-inner"]');
+        let desc = '';
+        if(inner){
+          // join inner texts but skip the button text
+          desc = Array.from(inner.children)
+                      .filter(n => !n.matches('button'))
+                      .map(n => n.innerText.trim())
+                      .filter(Boolean)
+                      .join('\n\n');
+        }
+        document.getElementById('shv-modal-title').innerText = title;
+        document.getElementById('shv-modal-body').innerText = desc;
+        modal.setAttribute('data-open','true');
+      });
+    });
+
+  })();
+
+
+
+  // index service page start 
+
+  
+    

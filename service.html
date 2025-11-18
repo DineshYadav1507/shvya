@@ -3,9 +3,10 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Shvya / BlackSilver — Services</title>
+        <title>Mailler - SaaS Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="One-time deployments, custom website & landing pages, SaaS project setup, cloud deployment, and ongoing support from BlackSilver / Shvya." name="description">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,234 +41,475 @@
         <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="display-6 text-primary m-0"><i class="fas fa-cubes me-3"></i>Shvya</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link active">Services</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="pricing.html" class="dropdown-item">Pricing</a>
-                                <a href="blog.html" class="dropdown-item">Blog</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-                    </div>
-                    <a href="#" class="btn btn-light border border-primary rounded-pill text-primary py-2 px-4 me-4">Log In</a>
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4">Book Demo</a>
+  <!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 px-lg-5 py-3 py-lg-0">
+
+        <!-- Brand / Logo -->
+        <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+
+            <!-- Image Logo -->
+            <img src="img/logo.png" alt="Shvya AI Logo" 
+                 style="height:48px; width:auto;">
+
+            <!-- Text beside logo -->
+            <span style="
+                font-size:1.5rem;
+                font-weight:800;
+                font-family:'Plus Jakarta Sans', sans-serif;
+                color:#0ea5e9;
+                margin-left:10px;
+                letter-spacing:-0.7px;
+            ">
+                Shvya
+            </span>
+
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="product.html" class="nav-item nav-link">Product</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-            </nav>
+               
+            <!-- Buttons -->
+            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4">
+                Book Demo
+            </a>
+
         </div>
-        <!-- Navbar & Hero End -->
+
+    </nav>
+</div>
+<!-- Navbar End -->
+
+        
+<!-- Services Start  -->
+
+<section id="shv-seva" aria-label="Seva (Services) section">
+  <style>
+    /* ===== Scoped styles for #shv-seva (Sanskrit-named classes) ===== */
+    #shv-seva { --accent: #ff6b4a; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; display:block; }
+
+    /* page wrapper styling (keeps this self-contained) */
+    #shv-seva .seva-aṅga { max-width:1200px;margin:28px auto;padding:24px;box-sizing:border-box; }
+
+    /* header */
+    #shv-seva .shirsha { display:flex;flex-direction:column;gap:6px;margin-bottom:14px; }
+    #shv-seva .shirsha h2 { margin:0;font-size:22px;color:#0f1724 }
+    #shv-seva .shirsha p { margin:0;color:#475569;font-size:14px }
+
+    /* grid: 3 columns x 2 rows */
+    #shv-seva .seva-jaal { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    @media (max-width:980px){ #shv-seva .seva-jaal{ grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:620px){ #shv-seva .seva-jaal{ grid-template-columns:1fr; } }
+
+    /* base for all cards */
+    #shv-seva [class$="-card"] {
+      position:relative; border-radius:16px; padding:14px; min-height:300px;
+      cursor:pointer; overflow:visible; transition:transform .32s, box-shadow .32s;
+      display:flex; flex-direction:column; justify-content:space-between;
+    }
+
+    /* inner colorful scene for tilt + hover */
+    #shv-seva .drishti-scene {
+      border-radius:12px; padding:16px; height:100%;
+      display:flex; flex-direction:column; justify-content:space-between;
+      transition: transform .32s, box-shadow .32s, filter .28s;
+      transform-origin:center; box-shadow: 0 12px 28px rgba(15,23,36,0.06);
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      will-change: transform;
+    }
+    #shv-seva [class$="-card"]:hover .drishti-scene { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(15,23,36,0.12); filter: saturate(1.04); }
+
+    /* top row */
+    #shv-seva .shirsha-top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+    #shv-seva .shirsha-left { min-width:0 }
+    #shv-seva .phala-badge { display:inline-block; padding:6px 10px; border-radius:9px; background: rgba(255,255,255,0.12); color:#fff; font-weight:700; font-size:12px; }
+    #shv-seva .phala-title { margin:8px 0 0; font-size:20px; font-weight:800; color:#fff; line-height:1.05; }
+
+    /* icons */
+    #shv-seva .pratika-icons { display:flex; gap:8px; align-items:center; }
+    #shv-seva .pratika-ico { width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background: rgba(255,255,255,0.08); color:#fff; font-size:18px; transition: transform .18s; }
+    #shv-seva [class$="-card"]:hover .pratika-ico { transform: translateY(-4px); }
+
+    /* white content panel */
+    #shv-seva .antara-panel { background:#fff; color:#0f1724; border-radius:12px; padding:14px; box-shadow: 0 10px 22px rgba(15,23,36,0.06); transition: transform .28s; }
+    #shv-seva [class$="-card"]:hover .antara-panel { transform: translateY(-6px); }
+    #shv-seva .antara-panel p { margin:8px 0; color:#334155; font-size:15px; line-height:1.45; }
+
+    /* CTA */
+    #shv-seva .kriya-cta { display:inline-block; margin-top:8px; padding:10px 14px; border-radius:12px; font-weight:800; color:#fff; text-decoration:none; background: linear-gradient(90deg,var(--accent), #ff8d6b); box-shadow: 0 12px 30px rgba(255,107,74,0.12); }
+    #shv-seva .kriya-cta:hover{ transform:translateY(-3px); }
+
+    /* footer */
+    #shv-seva .pada-foot { margin-top:12px; font-size:13px; color:rgba(255,255,255,0.95); }
+
+    /* decorative blob accent */
+    #shv-seva .phala-blob { position:absolute; right:18px; top:18px; width:64px; height:64px; border-radius:16px; opacity:0.12; filter: blur(10px); pointer-events:none; }
+
+    /* color themes (Sanskrit-named cards) */
+    #shv-seva .pratham-card .drishti-scene { background: linear-gradient(135deg,#16c387 0%, #0ea06b 100%); }
+    #shv-seva .dvitiy-card .drishti-scene { background: linear-gradient(135deg,#ffd86a 0%, #ffb84a 100%); color:#1f2937; }
+    #shv-seva .tritiy-card .drishti-scene { background: linear-gradient(135deg,#ff6b88 0%, #e64c6b 100%); }
+    #shv-seva .chaturth-card .drishti-scene { background: linear-gradient(135deg,#9f78ff 0%, #7a4cff 100%); }
+    #shv-seva .pancham-card .drishti-scene { background: linear-gradient(135deg,#ffb36b 0%, #ff9238 100%); color:#1f2937; }
+    #shv-seva .shashth-card .drishti-scene { background: linear-gradient(135deg,#6fe3c6 0%, #37c59b 100%); color:#1f2937; }
+
+    /* tilt smoothing class */
+    #shv-seva .drishti-scene.tilt-reset { transition: transform 420ms cubic-bezier(.2,.9,.2,1); }
+
+    /* modal styling (scoped) */
+    #shv-seva-modal { display:none; position:fixed; inset:0; align-items:center; justify-content:center; background: rgba(15,23,36,0.48); padding:20px; z-index:99999; }
+    #shv-seva-modal[data-open="true"] { display:flex; }
+    #shv-seva-modal .modal-kosha { width:100%; max-width:760px; background:#fff; color:#0f1724; border-radius:12px; padding:20px; box-shadow: 0 30px 80px rgba(15,23,36,0.12); border:1px solid rgba(15,23,36,0.04); }
+    #shv-seva-modal h3 { margin:0 0 8px; }
+    #shv-seva-modal p { margin:8px 0; color:#475569; line-height:1.45; }
+    #shv-seva-modal .modal-actions { display:flex; justify-content:flex-end; gap:10px; margin-top:12px; }
+    #shv-seva-modal button { padding:10px 14px; border-radius:10px; border:none; cursor:pointer; font-weight:700; }
+
+    /* accessibility focus */
+    #shv-seva [data-seva-open]:focus { outline:3px solid rgba(16,24,40,0.06); outline-offset:4px; border-radius:10px; }
+
+  </style>
+
+  <div class="seva-aṅga">
+    <div class="shirsha">
+    <h2>Shvya SaaS Service and Ready tou use Deployment </h2>
+    <p>All product is drploymeret in max 3 hr on your server </p>
+</div>
+
+<style>
+.shirsha{
+    width:100%;
+    text-align:center;
+    margin:60px auto 40px auto;
+    padding:25px 30px;
+    max-width:750px;
+
+    /* Highlight Style */
+    background:linear-gradient(90deg,#ff6b4a1a,#ff874f1a);
+    border:1px solid rgba(255,107,74,0.35);
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.shirsha h2{
+    margin:0;
+    font-size:34px;
+    font-weight:900;
+    color:#ff6b4a;
+    letter-spacing:0.7px;
+}
+
+.shirsha p{
+    margin:10px 0 0 0;
+    font-size:16px;
+    font-weight:500;
+    color:#475569;
+    line-height:1.5;
+}
+</style>
 
 
-         <!-- Header Start -->
-         <div class="container-fluid bg-breadcrumb">
-            <ul class="breadcrumb-animation">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Services</h3>
-                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">Services</li>
-                </ol>    
+    <div class="seva-jaal" role="list">
+
+      <!-- 1. pratham (Custom Website Development) -->
+      <article class="pratham-card" data-seva-card="Custom Website Development" role="listitem">
+        <div class="drishti-scene" data-drishti>
+          <div class="shirsha-top">
+            <div class="shirsha-left">
+              <div class="phala-badge">01 • Website</div>
+              <h3 class="phala-title">Custom Website Development</h3>
             </div>
-        </div>
-        <!-- Header End -->
-
-
-        <!-- Service Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
-                    <h4 class="mb-1 text-primary">Our Services</h4>
-                    <h1 class="display-5 mb-4">What we deliver — fast, secure, and production-ready</h1>
-                    <p class="mb-0">One-time deployments, custom landing pages, SaaS project setup and end-to-end support. We build, deploy and hand over production-ready systems so you can go live with confidence.</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <!-- One-time Deployment -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-rocket fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">One-time Deployment</h4>
-                                <p class="mb-4">We deploy your app or website to production (cloud or on-prem) with CI/CD, SSL, monitoring and best-practice hardening — a single reliable deployment, done right.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Custom Website & Landing Pages -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-laptop-code fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">Custom Website & Landing Pages</h4>
-                                <p class="mb-4">Conversion-focused landing pages and marketing sites tailored to your brand — responsive, fast and SEO-friendly.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SaaS Project Setup -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-server fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">SaaS Project Setup</h4>
-                                <p class="mb-4">Architect, build and configure SaaS-ready stacks (multi-tenant patterns, billing hooks, role-based access) so your product is production-ready from day one.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- UI/UX & Design -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-palette fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">UI / UX & Prototypes</h4>
-                                <p class="mb-4">User-centered design and clickable prototypes — improve conversion and reduce development rework with fast, validated UX iterations.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud, DevOps & Monitoring -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-cloud-upload-alt fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">Cloud, DevOps & Monitoring</h4>
-                                <p class="mb-4">Kubernetes/Docker deployments, infra-as-code, log aggregation and alerts — reliable infra that scales with your users.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Integrations & APIs -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-plug fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">Integrations & APIs</h4>
-                                <p class="mb-4">Connect payments, CRMs, analytics and third-party tools with secure, documented APIs and webhook-driven integrations.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Analytics, SEO & Performance -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-chart-line fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">Analytics, SEO & Performance</h4>
-                                <p class="mb-4">Setup analytics, conversion tracking, speed optimizations and SEO basics so your site performs and converts from day one.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Maintenance & Support -->
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="service-item text-center rounded p-4">
-                            <div class="service-icon d-inline-block bg-light rounded p-4 mb-4"><i class="fas fa-headset fa-5x text-secondary"></i></div>
-                            <div class="service-content">
-                                <h4 class="mb-4">Maintenance & Support</h4>
-                                <p class="mb-4">Ongoing support, security patching and incremental improvements — keep production stable while you focus on growth.</p>
-                                <a href="#" class="btn btn-light rounded-pill text-primary py-2 px-4">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="pratika-icons" aria-hidden="true">
+              <div class="pratika-ico">🌐</div>
+              <div class="pratika-ico">⚡</div>
+              <div class="pratika-ico">🔒</div>
             </div>
+          </div>
+
+          <div class="antara-panel">
+            <p><strong>What:</strong> Fast, SEO-friendly custom websites (React / Next / HTML) with CMS & hosting.</p>
+            <p><strong>Why:</strong> Convert visitors, faster load times, full UX control.</p>
+            <a class="kriya-cta" href="#" data-seva-open="Custom Website Development">Request Quote</a>
+          </div>
+
+          <div class="pada-foot">Design • Performance • Hosting</div>
+          <div class="phala-blob" aria-hidden="true" style="background:#16c387;"></div>
         </div>
-        <!-- Service End -->
+      </article>
 
-
-        <!-- FAQ Start -->
-        <div class="container-fluid FAQ bg-light overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                       <div class="accordion" id="accordionExample">
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
-                                        How long does a one-time deployment take?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Deployment timing depends on complexity.</h5>
-                                        <p>Simple static sites or landing pages can be deployed in a day. SaaS deployments (CI/CD, DB migrations, monitoring) usually take several days to a few weeks depending on scope.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Do you provide post-launch support? 
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Yes — we offer maintenance and support plans.</h5>
-                                        <p>Choose from hourly support, monthly retainers or SLA-backed enterprise agreements. We handle security patches, performance tuning and urgent fixes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Will you migrate our existing data?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Yes — data migration services are available.</h5>
-                                        <p>We plan, test and migrate data with minimal downtime. For SaaS migrations we create mapping, validation and rollback plans before executing migration runs.</p>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="FAQ-img RotateMoveRight rounded">
-                            <img src="img/about-1.png" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                </div>
+      <!-- 2. dvitiy (Digital Marketing & Social Media) -->
+      <article class="dvitiy-card" data-seva-card="Digital Marketing & Social Media" role="listitem">
+        <div class="drishti-scene" data-drishti>
+          <div class="shirsha-top">
+            <div class="shirsha-left">
+              <div class="phala-badge">02 • Marketing</div>
+              <h3 class="phala-title">Digital Marketing & Social Media</h3>
             </div>
+            <div class="pratika-icons" aria-hidden="true">
+              <div class="pratika-ico">📣</div>
+              <div class="pratika-ico">📱</div>
+              <div class="pratika-ico">📈</div>
+            </div>
+          </div>
+
+          <div class="antara-panel">
+            <p><strong>What:</strong> Ads, organic content, campaigns & analytics to drive leads and brand growth.</p>
+            <p><strong>Why:</strong> Improve visibility, track ROI & grow audience.</p>
+            <a class="kriya-cta" href="#" data-seva-open="Digital Marketing & Social Media">Request Quote</a>
+          </div>
+
+          <div class="pada-foot">Ads • Content • Growth</div>
+          <div class="phala-blob" aria-hidden="true" style="background:#ffd86a;"></div>
         </div>
-        <!-- FAQ End -->
+      </article>
+
+      <!-- 3. tritiy (Custom Software & Business Support) -->
+      <article class="tritiy-card" data-seva-card="Custom Software & Business Support" role="listitem">
+        <div class="drishti-scene" data-drishti>
+          <div class="shirsha-top">
+            <div class="shirsha-left">
+              <div class="phala-badge">03 • Software</div>
+              <h3 class="phala-title">Custom Software & Business Support</h3>
+            </div>
+            <div class="pratika-icons" aria-hidden="true">
+              <div class="pratika-ico">🛠️</div>
+              <div class="pratika-ico">🤝</div>
+              <div class="pratika-ico">🔁</div>
+            </div>
+          </div>
+
+          <div class="antara-panel">
+            <p><strong>What:</strong> Tailored apps, integrations and on-going ops support.</p>
+            <p><strong>Why:</strong> Automate workflows, reduce cost & scale processes.</p>
+            <a class="kriya-cta" href="#" data-seva-open="Custom Software & Business Support">Request Quote</a>
+          </div>
+
+          <div class="pada-foot">API • Integrations • Managed Support</div>
+          <div class="phala-blob" aria-hidden="true" style="background:#ff6f8f;"></div>
+        </div>
+      </article>
+
+      <!-- 4. chaturth (CRM/ERP Automation & Chatbot Dev) -->
+      <article class="chaturth-card" data-seva-card="CRM/ERP Automation & Chatbot Development" role="listitem">
+        <div class="drishti-scene" data-drishti>
+          <div class="shirsha-top">
+            <div class="shirsha-left">
+              <div class="phala-badge">04 • Automation</div>
+              <h3 class="phala-title">CRM / ERP Automation & Chatbots</h3>
+            </div>
+            <div class="pratika-icons" aria-hidden="true">
+              <div class="pratika-ico">🤖</div>
+              <div class="pratika-ico">🔁</div>
+              <div class="pratika-ico">📊</div>
+            </div>
+          </div>
+
+          <div class="antara-panel">
+            <p><strong>What:</strong> Automate leads & tickets, custom chatbots and CRM/ERP integrations.</p>
+            <p><strong>Why:</strong> Faster replies, fewer manual steps, measurable conversions.</p>
+            <a class="kriya-cta" href="#" data-seva-open="CRM/ERP Automation & Chatbot Development">Request Quote</a>
+          </div>
+
+          <div class="pada-foot">Chatbots • Automation • Reporting</div>
+          <div class="phala-blob" aria-hidden="true" style="background:#9f78ff;"></div>
+        </div>
+      </article>
+
+      <!-- 5. pancham (Shopify Stores & E-commerce) -->
+      <article class="pancham-card" data-seva-card="Shopify Stores & E-commerce" role="listitem">
+        <div class="drishti-scene" data-drishti>
+          <div class="shirsha-top">
+            <div class="shirsha-left">
+              <div class="phala-badge">05 • Shopify</div>
+              <h3 class="phala-title">Shopify Stores & E-commerce</h3>
+            </div>
+            <div class="pratika-icons" aria-hidden="true">
+              <div class="pratika-ico">🛒</div>
+              <div class="pratika-ico">💳</div>
+              <div class="pratika-ico">🚚</div>
+            </div>
+          </div>
+
+          <div class="antara-panel">
+            <p><strong>What:</strong> Shopify themes, apps, payments & shipping setup — conversion-focused stores.</p>
+            <p><strong>Why:</strong> Launch faster, optimize checkout & operations.</p>
+            <a class="kriya-cta" href="#" data-seva-open="Shopify Stores & E-commerce">Request Quote</a>
+          </div>
+
+          <div class="pada-foot">Themes • Apps • Store Ops</div>
+          <div class="phala-blob" aria-hidden="true" style="background:#ffb36b;"></div>
+        </div>
+      </article>
+
+      <!-- 6. shashth (Ready-to-use Software) -->
+      <article class="shashth-card" data-seva-card="Ready-to-use Software" role="listitem">
+        <div class="drishti-scene" data-drishti>
+          <div class="shirsha-top">
+            <div class="shirsha-left">
+              <div class="phala-badge">06 • Ready</div>
+              <h3 class="phala-title">Ready-to-use Software</h3>
+            </div>
+            <div class="pratika-icons" aria-hidden="true">
+              <div class="pratika-ico">⚙️</div>
+              <div class="pratika-ico">✅</div>
+              <div class="pratika-ico">🔧</div>
+            </div>
+          </div>
+
+          <div class="antara-panel">
+            <p><strong>What:</strong> Pre-built modules & SaaS solutions you can deploy quickly.</p>
+            <p><strong>Why:</strong> Lower cost, faster time-to-market, configurable to your needs.</p>
+            <a class="kriya-cta" href="#" data-seva-open="Ready-to-use Software">Request Quote</a>
+          </div>
+
+          <div class="pada-foot">SaaS Modules • Quick Deploy • Config</div>
+          <div class="phala-blob" aria-hidden="true" style="background:#6fe3c6;"></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Modal (scoped) -->
+  <div id="shv-seva-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-kosha">
+      <h3 id="shv-seva-modal-title">Service</h3>
+      <p id="shv-seva-modal-body">Details</p>
+      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:12px">
+        <button id="shv-seva-modal-close" style="padding:10px 14px;border-radius:10px;border:none;cursor:pointer;background:#f1f5f9">Close</button>
+        <button id="shv-seva-modal-action" style="padding:10px 14px;border-radius:10px;border:none;cursor:pointer;background:linear-gradient(90deg,var(--accent),#ff8d6b);color:#fff">Request Quote</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const root = document.getElementById('shv-seva');
+      if(!root) return;
+
+      // TILT interaction: for elements with data-drishti
+      const scenes = root.querySelectorAll('[data-drishti]');
+      scenes.forEach(scene => {
+        const node = scene;
+        const strength = 12;
+        let rect = null;
+
+        function handlePointer(e){
+          rect = node.getBoundingClientRect();
+          const px = (e.clientX - rect.left) / rect.width;
+          const py = (e.clientY - rect.top) / rect.height;
+          const rotateY = (px - 0.5) * strength * -1;
+          const rotateX = (py - 0.5) * strength;
+          node.style.transform = `rotateX(${rotateX/10}deg) rotateY(${rotateY/10}deg)`;
+          node.classList.remove('tilt-reset');
+        }
+
+        function handleLeave(){
+          node.classList.add('tilt-reset');
+          node.style.transform = 'rotateX(0deg) rotateY(0deg)';
+          setTimeout(()=> node.classList.remove('tilt-reset'), 420);
+        }
+
+        node.addEventListener('pointermove', handlePointer);
+        node.addEventListener('pointerleave', handleLeave);
+        node.addEventListener('pointercancel', handleLeave);
+        // fallback for mouse
+        node.addEventListener('mousemove', handlePointer);
+        node.addEventListener('mouseleave', handleLeave);
+      });
+
+      // Modal logic (scoped)
+      const modal = document.getElementById('shv-seva-modal');
+      const mTitle = document.getElementById('shv-seva-modal-title');
+      const mBody  = document.getElementById('shv-seva-modal-body');
+      const btnClose = document.getElementById('shv-seva-modal-close');
+      const btnAction = document.getElementById('shv-seva-modal-action');
+
+      function openModal(title, body){
+        mTitle.innerText = title;
+        mBody.innerText = body;
+        modal.setAttribute('data-open','true');
+        modal.setAttribute('aria-hidden','false');
+        btnClose.focus();
+      }
+      function closeModal(){
+        modal.setAttribute('data-open','false');
+        modal.setAttribute('aria-hidden','true');
+      }
+
+      // attach to CTAs inside root
+      root.querySelectorAll('[data-seva-open]').forEach(btn => {
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          const card = btn.closest('[data-seva-card]');
+          const title = card?.getAttribute('data-seva-card') || card?.querySelector('.phala-title')?.innerText || 'Service';
+          const contentEl = card?.querySelector('.antara-panel');
+          let desc = '';
+          if(contentEl){
+            desc = Array.from(contentEl.children)
+                        .filter(n => !n.matches('[data-seva-open]'))
+                        .map(n => n.innerText.trim())
+                        .filter(Boolean)
+                        .join('\n\n');
+          }
+          openModal(title, desc);
+        });
+      });
+
+      // modal handlers
+      btnClose.addEventListener('click', closeModal);
+      btnAction.addEventListener('click', ()=> {
+        alert('Thank you — request received. We will contact you soon.');
+        closeModal();
+      });
+      modal.addEventListener('click', (e)=> { if(e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e)=> { if(e.key === 'Escape' && modal.getAttribute('data-open') === 'true') closeModal(); });
+
+    })();
+  </script>
+</section>
+<!-- Services End  -->
+<!-- cta Start  -->
+<section class="sales-panel">
+    <div class="sales-left">
+        <h2 class="sales-heading">
+            Supercharge your
+            <span class="highlight-pill">Operations</span>
+            with Shvya!
+        </h2>
+
+        <p class="sales-text">
+            Whether you want to simplify your CRM, automate HR, or streamline operations across every department.
+            <strong>Shvya helps your business scale, not struggle.</strong></p>
+
+        <a href="#" class="sales-btn">
+            Book A Free Demo
+        </a>
+        <br>
+        <br>
+        <p><strong>Your Business, Simplified with Shvya.</strong></p>
+    </div>
+
+    <div class="sales-right">
+        <img src="img/Banner-gif-new.gif" alt="sales illustration">
+    </div>
+</section>
+<!-- cta End  -->
+
+
 
 
         <!-- Footer Start -->
@@ -277,12 +519,12 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-dark mb-4">Company</h4>
-                            <a href=""> Why Shvya?</a>
-                            <a href=""> Features</a>
-                            <a href=""> Customers</a>
+                            <a href=""> Why Mailler?</a>
+                            <a href=""> Our Features</a>
+                            <a href=""> Our Portfolio</a>
                             <a href=""> About Us</a>
-                            <a href=""> Blog</a>
-                            <a href=""> Contact</a>
+                            <a href=""> Our Blog & News</a>
+                            <a href=""> Get In Touch</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
@@ -292,28 +534,28 @@
                             <a href=""> Contact Us</a>
                             <a href=""> Privacy Policy</a>
                             <a href=""> Terms & Conditions</a>
-                            <a href=""> Blog</a>
-                            <a href=""> Careers</a>
+                            <a href=""> Our Blog & News</a>
+                            <a href=""> Our Team</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-dark">Products</h4>
-                            <a href=""> CRM</a>
-                            <a href=""> AI Assistant</a>
-                            <a href=""> HRM & Payroll</a>
-                            <a href=""> Inventory</a>
-                            <a href=""> School ERP</a>
-                            <a href=""> Hospital ERP</a>
+                            <h4 class="mb-4 text-dark">Services</h4>
+                            <a href=""> All Services</a>
+                            <a href=""> Promotional Emails</a>
+                            <a href=""> Product Updates</a>
+                            <a href=""> Email Marketing</a>
+                            <a href=""> Acquistion Emails</a>
+                            <a href=""> Retention Emails</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-dark">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> Bangalore, India</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> hello@shvya.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +91 98765 43210</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +91 98765 43210</a>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-secondary me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -327,191 +569,18 @@
             </div>
         </div>
         <!-- Footer End -->
-<!-- === Live WhatsApp Sales Popup (All-in-one Code with Your Number) === -->
-<style>
-  /* Floating WhatsApp Button */
-  .wa-float {
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    width: 64px;
-    height: 64px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,.22);
-    z-index: 9999;
-    text-decoration: none;
-    transition: transform .18s ease;
-  }
-  .wa-float:hover { transform: scale(1.08); }
-  .wa-float img { width:36px; height:36px; }
 
-  /* Ring effect */
-  .wa-ring {
-    position:absolute;
-    width:86px; height:86px; border-radius:50%;
-    right: -11px; bottom: -11px; z-index: -1;
-    pointer-events:none;
-    animation: ringPulse 2.6s infinite ease-out;
-    box-shadow: 0 0 0 6px rgba(37,211,102,.06), 0 0 30px 6px rgba(37,211,102,.04) inset;
-  }
-  @keyframes ringPulse {
-    0% { transform: scale(.7); opacity: .95 }
-    70% { transform: scale(1.6); opacity: 0 }
-    100% { opacity: 0 }
-  }
-
-  /* Popup card */
-  .sales-popup {
-    position: fixed;
-    right: 94px;
-    bottom: 26px;
-    width: 320px;
-    max-width: calc(100% - 140px);
-    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,248,255,0.98));
-    border-radius: 14px;
-    box-shadow: 0 22px 50px rgba(15,23,42,0.18);
-    padding: 14px;
-    z-index: 9998;
-    transform-origin: bottom right;
-    transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s;
-    opacity: 0;
-    visibility: hidden;
-  }
-  .sales-popup.show { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
-  .sales-popup.hide { opacity: 0; transform: translateY(10px) scale(.98); }
-  .sales-popup.anim-in { animation: popIn .36s cubic-bezier(.2,.9,.2,1); }
-
-  @keyframes popIn {
-    0% { transform: translateY(14px) scale(.98); opacity:0; }
-    60% { transform: translateY(-8px) scale(1.01); opacity:1; }
-    100% { transform: translateY(0) scale(1); }
-  }
-
-  .sales-popup .head { display:flex; gap:10px; align-items:center; }
-  .sales-popup .avatar {
-    width:44px; height:44px; border-radius:10px;
-    background: linear-gradient(90deg,#fff,#eef6ff);
-    display:flex; align-items:center; justify-content:center;
-    box-shadow: inset 0 6px 12px rgba(16,24,40,0.04);
-    font-weight:700; color:#0f172a;
-  }
-  .sales-popup h4 { margin:0; font-size:15px; }
-  .sales-popup p { margin:6px 0 0; font-size:13px; color:#55607a; }
-
-  .sales-popup .ctas { display:flex; gap:8px; margin-top:12px; }
-  .btn {
-    padding:8px 12px; border-radius:10px; border:0;
-    cursor:pointer; font-weight:600; text-decoration:none;
-    font-size:13px; display:inline-flex; align-items:center;
-  }
-  .btn-primary { background:#25D366; color:#fff; }
-  .btn-outline { background:transparent; border:1px solid rgba(15,23,42,0.06); color:#374151; }
-
-  .sales-popup .close {
-    position:absolute; right:10px; top:8px; background:transparent;
-    border:0; cursor:pointer; font-size:14px; color:#6b7280;
-  }
-
-  .sales-popup .meta-note {
-    margin-top:10px; font-size:12px; color:#8b95a8;
-    display:flex; align-items:center; gap:8px;
-  }
-
-  @media (max-width:640px) {
-    .sales-popup { right: 14px; left: 14px; width:auto; bottom: 86px; }
-    .wa-float { right: 14px; bottom: 14px; }
-  }
-</style>
-
-<!-- WhatsApp Floating Button -->
-<a class="wa-float" id="waFloat" href="https://wa.me/916393413211?text=Hi%20I%20want%20to%20know%20more%20about%20your%20product" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png">
-  <div class="wa-ring" id="waRing"></div>
-</a>
-
-<!-- Sales Popup -->
-<div class="sales-popup" id="salesPopup">
-  <button class="close" id="salesClose">✕</button>
-  <div class="head">
-    <div class="avatar">Shvya-Ai</div>
-    <div class="meta">
-      <h4>Live Sales Support</h4>
-      <p>Chat with us or book a demo call.</p>
-    </div>
-  </div>
-
-  <div class="ctas">
-    <a href="https://wa.me/916393413211?text=Hi%20I%20am%20interested%20in%20your%20SaaS%20platform" class="btn btn-primary" id="chatBtn" target="_blank">Chat on WhatsApp</a>
-    <a href="bookcall.html" class="btn btn-outline" id="bookBtn" target="_blank">Book a Demo</a>
-  </div>
-
-  <div class="meta-note">
-    <input type="checkbox" id="dontShow"> <span>Don't show again</span>
-  </div>
-</div>
-
-<script>
-(function(){
-  const OPEN_DELAY = 3000;
-  const REOPEN_INTERVAL = 15000;
-
-  const popup = document.getElementById('salesPopup');
-  const closeBtn = document.getElementById('salesClose');
-  const dontShow = document.getElementById('dontShow');
-
-  const chatBtn = document.getElementById('chatBtn');
-  const bookBtn = document.getElementById('bookBtn');
-
-  let reopenTimer = null;
-  let popupOpen = false;
-
-  function showPopup() {
-    if (dontShow.checked) return;
-    popup.classList.add('show','anim-in');
-    popupOpen = true;
-  }
-
-  function hidePopup() {
-    popup.classList.remove('show','anim-in');
-    popupOpen = false;
-  }
-
-  function scheduleReopen() {
-    clearInterval(reopenTimer);
-    reopenTimer = setInterval(() => {
-      if (!popupOpen && !dontShow.checked) showPopup();
-    }, REOPEN_INTERVAL);
-  }
-
-  closeBtn.addEventListener('click', hidePopup);
-  [chatBtn, bookBtn].forEach(btn => {
-    btn.addEventListener('click', () => {
-      clearInterval(reopenTimer);
-    });
-  });
-
-  setTimeout(() => {
-    showPopup();
-    scheduleReopen();
-  }, OPEN_DELAY);
-
-})();
-</script>
-
-<!-- Whatsaap End  -->
-        
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Shvya</a>, All right reserved.</span>
+                        <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
                     </div>
                     <div class="col-md-6 text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
                         Designed By <a class="border-bottom" href="#">Shvya AI</a>
                     </div>
                 </div>
@@ -523,7 +592,7 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-
+        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

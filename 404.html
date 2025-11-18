@@ -1,138 +1,454 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Refund Policy — AlmostZero</title>
-  <style>
-    /* Minimal, clean styling */
-    :root{
-      --bg:#f7fbff;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent:#1e3a8a;
-      --radius:12px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      min-height:100vh;
-      background:linear-gradient(180deg, #eef6ff 0%, var(--bg) 60%);
-      color:#0f1724;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px;
-      -webkit-font-smoothing:antialiased;
-    }
+<section id="shv-seva-v4">
 
-    .container{
-      width:100%;
-      max-width:900px;
-      padding:28px;
-    }
+<style>
+/* ---------- ROOT ---------- */
+#shv-seva-v4{
+  --ink:#0f172a;
+  --muted:#64748b;
+  --accent:#ff6b4a;
+  --radius:22px;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+  padding:40px 18px;
+  background:#ffffff;
+}
+#shv-seva-v4 .wrap{
+  max-width:1280px;margin:auto;display:flex;flex-direction:column;gap:50px;
+}
 
-    .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow: 0 8px 30px rgba(14,30,60,0.06);
-      border:1px solid rgba(2,6,23,0.04);
-    }
+/* ---------- SECTION ROW ---------- */
+.seva-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:40px;
+  background:#fff;border-radius:var(--radius);
+  padding:35px;box-shadow:0 25px 55px rgba(0,0,0,0.06);
+  opacity:0;transform:translateY(45px);
+  transition:all .9s cubic-bezier(.2,.9,.2,1);
+}
+.seva-row.show{
+  opacity:1;transform:translateY(0);
+}
 
-    header{display:flex;gap:14px;align-items:center;margin-bottom:16px}
-    .logo {
-      width:56px;height:56px;border-radius:10px;
-      background:linear-gradient(135deg,var(--accent),#60a5fa);
-      color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:18px;
-    }
-    h1{font-size:20px;margin:0}
-    p.lead{margin:6px 0 0;color:var(--muted);font-size:14px}
+/* Reverse Layout */
+.seva-row.reverse{direction:rtl;}
+.seva-row.reverse>*{direction:ltr;}
 
-    hr {border:none;border-top:1px solid rgba(2,6,23,0.04);margin:20px 0;border-radius:4px}
+@media(max-width:900px){
+  .seva-row,.seva-row.reverse{grid-template-columns:1fr;direction:ltr;}
+}
 
-    section h2{font-size:15px;margin:10px 0 6px}
-    section p{color:var(--muted);margin:6px 0;line-height:1.6;font-size:14px}
-    ul.simple{margin:8px 0 0 18px;color:var(--muted)}
-    ul.simple li{margin:8px 0}
+/* ---------- TEXT BLOCK ---------- */
+.seva-text{display:flex;flex-direction:column;gap:14px;}
+.seva-num{padding:6px 12px;background:#e2e8f0;border-radius:10px;font-weight:700;color:var(--ink);}
+.seva-title{margin:0;font-size:28px;font-weight:800;color:var(--ink);}
+.seva-summary{margin:0;font-size:15px;color:var(--muted);}
+.seva-feats{margin:0;padding-left:20px;font-size:15px;color:var(--ink);line-height:1.5;}
+.seva-feats li{margin:6px 0;}
 
-    .meta{display:flex;gap:12px;align-items:center;margin-top:14px}
-    .meta .label{font-weight:700}
-    .footer-note{margin-top:18px;color:var(--muted);font-size:13px}
+.seva-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;}
+.seva-cta{
+  padding:10px 16px;border:none;border-radius:12px;
+  background:linear-gradient(90deg,var(--accent),#ff874f);
+  color:#fff;font-weight:700;cursor:pointer;
+}
+.seva-highlight{
+  padding:10px 16px;border-radius:12px;
+  border:1px solid rgba(255,107,74,0.3);
+  background:#fff;color:var(--accent);
+  font-weight:600;cursor:pointer;
+}
 
-    /* responsive */
-    @media (max-width:640px){
-      .container{padding:12px}
-      .card{padding:18px}
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <article class="card" role="article" aria-labelledby="title">
-      <header>
-        <div class="logo" aria-hidden="true">AZ</div>
-        <div>
-          <h1 id="title">Refund Policy</h1>
-          <p class="lead">This page explains when refunds are available and how they are processed.</p>
-        </div>
-      </header>
+/* ---------- CAROUSEL ---------- */
+.seva-carousel{
+  width:100%;height:360px;border-radius:16px;overflow:hidden;
+  position:relative;box-shadow:0 18px 50px rgba(0,0,0,0.1);
+  background:#f1f5f9;
+}
+@media(max-width:700px){.seva-carousel{height:240px;}}
 
-      <section aria-labelledby="overview">
-        <h2 id="overview">Overview</h2>
-        <p>AlmostZero (the "Company") aims for customer satisfaction. This Refund Policy outlines the circumstances under which refunds are given, and how you can request one.</p>
-      </section>
+.seva-slide{
+  position:absolute;inset:0;opacity:0;transition:opacity .8s ease;
+}
+.seva-slide.active{opacity:1;}
+.seva-slide img{width:100%;height:100%;object-fit:cover;}
 
-      <hr />
+.arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:46px;height:46px;border-radius:10px;background:#fff;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  border:1px solid rgba(0,0,0,0.08);
+  display:grid;place-items:center;cursor:pointer;font-size:22px;font-weight:800;
+  color:var(--ink);
+}
+.arrow.left{left:12px;}
+.arrow.right{right:12px;}
 
-      <section aria-labelledby="eligibility">
-        <h2 id="eligibility">Eligibility</h2>
-        <p>Refunds may be issued in the following situations:</p>
-        <ul class="simple">
-          <li>The purchased product or service was not delivered as described.</li>
-          <li>A duplicate or erroneous charge was made.</li>
-          <li>Cancellation within the allowed window stated during purchase.</li>
-        </ul>
-        <p><strong>Timeframes:</strong> For digital goods, requests must be made within <strong>14 days</strong> of purchase unless otherwise specified. For physical goods, returns must be initiated within <strong>30 days</strong> of delivery.</p>
-      </section>
+.dots{
+  position:absolute;bottom:12px;left:50%;transform:translateX(-50%);
+  display:flex;gap:8px;
+}
+.dot{
+  width:10px;height:10px;border-radius:50%;
+  background:rgba(0,0,0,0.24);cursor:pointer;
+}
+.dot.active{
+  background:var(--accent);box-shadow:0 4px 10px rgba(255,107,74,0.3);
+}
 
-      <hr />
+.caption{
+  position:absolute;bottom:12px;left:12px;
+  background:rgba(0,0,0,0.5);color:#fff;
+  padding:6px 10px;border-radius:8px;font-size:13px;
+}
 
-      <section aria-labelledby="exceptions">
-        <h2 id="exceptions">Exceptions</h2>
-        <p>The following are generally non-refundable:</p>
-        <ul class="simple">
-          <li>Services fully completed with customer approval.</li>
-          <li>Items explicitly marked non-refundable at purchase.</li>
-          <li>Fees charged by third parties or for late payments.</li>
-        </ul>
-      </section>
+/* ---------- MODAL ---------- */
+.seva-modal{
+  position:fixed;inset:0;background:rgba(0,0,0,0.55);
+  display:none;align-items:center;justify-content:center;
+  padding:20px;z-index:999999;
+}
+.seva-modal.open{display:flex;}
+.modal-card{
+  background:#fff;border-radius:16px;padding:24px;
+  width:100%;max-width:620px;box-shadow:0 25px 90px rgba(0,0,0,0.2);
+  color:var(--ink);
+}
+.modal-card h3{margin:0 0 12px;font-size:22px;font-weight:800;}
+.modal-card ul{padding-left:20px;}
+.modal-card li{margin:8px 0;color:#334155;font-size:15px;}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:14px;}
+.modal-actions button{
+  padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:700;
+}
+</style>
 
-      <hr />
+<div class="wrap">
 
-      <section aria-labelledby="process">
-        <h2 id="process">How to Request a Refund</h2>
-        <p>To request a refund, please contact our support team with the following details:</p>
-        <ul class="simple">
-          <li>Order or invoice number</li>
-          <li>Purchase date</li>
-          <li>Reason for the refund request and any supporting evidence (screenshots, receipts)</li>
-        </ul>
-        <p>We will review requests and respond within <strong>5 business days</strong>. If approved, refunds will be issued to the original payment method and may take several business days to appear on your statement.</p>
-      </section>
 
-      <hr />
 
-      <section aria-labelledby="contact">
-        <h2 id="contact">Contact</h2>
-        <p>Please contact our support at: <strong>support@almostzero.io</strong> for refund requests or questions.</p>
-      </section>
+<!-- ======================================================
+     1 — LEFT Slider | RIGHT Text
+====================================================== -->
+<section class="seva-row pratham reverse">
+  <div class="seva-carousel" data-carousel="crm">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/13a77f/ffffff?text=CRM+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/159e73/ffffff?text=CRM+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/18c087/ffffff?text=CRM+3"></div>
 
-      <div class="footer-note">
-        Effective date: <strong>November 16, 2025</strong>. This policy may be updated periodically; please check this page for the latest version.
-      </div>
-    </article>
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">CRM Dashboard</div>
   </div>
-</body>
-</html>
+
+  <div class="seva-text">
+    <span class="seva-num">01</span>
+    <h3 class="seva-title">Shvya CRM</h3>
+    <p class="seva-summary">Unified CRM with leads, tickets and chatbot automation.</p>
+    <ul class="seva-feats">
+      <li>Lead scoring</li><li>SLA tickets</li><li>Chatbot</li><li>Campaign tracking</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya CRM">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+     2 — RIGHT Slider | LEFT Text
+====================================================== -->
+<section class="seva-row dvitiy">
+  <div class="seva-text">
+    <span class="seva-num">02</span>
+    <h3 class="seva-title">Shvya Inventory</h3>
+    <p class="seva-summary">Manage stock, barcode scanning and reorder alerts.</p>
+    <ul class="seva-feats">
+      <li>Real-time stock</li><li>Barcode scan</li><li>Auto reorder</li><li>Transfers</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya Inventory">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+
+  <div class="seva-carousel" data-carousel="inventory">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/2f9bd6/ffffff?text=Inventory+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/1b7bb0/ffffff?text=Inventory+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/45a8dd/ffffff?text=Inventory+3"></div>
+
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">Inventory Dashboard</div>
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+     3 — LEFT Slider | RIGHT Text
+====================================================== -->
+<section class="seva-row tritiy reverse">
+  <div class="seva-carousel" data-carousel="school">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/ffcf5c/000?text=School+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/f3a22a/000?text=School+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/fcd063/000?text=School+3"></div>
+
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">School ERP</div>
+  </div>
+
+  <div class="seva-text">
+    <span class="seva-num">03</span>
+    <h3 class="seva-title">Shvya School ERP</h3>
+    <p class="seva-summary">Attendance, fees, LMS & parent communication.</p>
+    <ul class="seva-feats">
+      <li>Attendance</li><li>Fees</li><li>LMS</li><li>Exam reports</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya School ERP">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+     4 — RIGHT Slider | LEFT Text
+====================================================== -->
+<section class="seva-row chaturth">
+  <div class="seva-text">
+    <span class="seva-num">04</span>
+    <h3 class="seva-title">Shvya Hospital ERP</h3>
+    <p class="seva-summary">EMR, OPD, IPD, lab & billing in one suite.</p>
+    <ul class="seva-feats">
+      <li>EMR</li><li>Lab</li><li>IPD/OPD</li><li>Billing</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya Hospital ERP">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+
+  <div class="seva-carousel" data-carousel="hospital">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/e56a76/fff?text=Hospital+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/b63a41/fff?text=Hospital+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/d2545f/fff?text=Hospital+3"></div>
+
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">Hospital ERP</div>
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+     5 — LEFT Slider | RIGHT Text
+====================================================== -->
+<section class="seva-row pancham reverse">
+  <div class="seva-carousel" data-carousel="restaurant">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/c28f6e/fff?text=Restaurant+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/9a6e4c/fff?text=Restaurant+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/b88a63/fff?text=Restaurant+3"></div>
+
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">Restaurant ERP</div>
+  </div>
+
+  <div class="seva-text">
+    <span class="seva-num">05</span>
+    <h3 class="seva-title">Shvya Restaurant ERP</h3>
+    <p class="seva-summary">POS, KOT, tables & workflow automation.</p>
+    <ul class="seva-feats">
+      <li>POS billing</li><li>KOT</li><li>Table mgmt</li><li>Inventory</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya Restaurant ERP">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+     6 — RIGHT Slider | LEFT Text
+====================================================== -->
+<section class="seva-row shashth">
+  <div class="seva-text">
+    <span class="seva-num">06</span>
+    <h3 class="seva-title">Shvya HRM + Payroll</h3>
+    <p class="seva-summary">Attendance, shifts, payroll & compliance.</p>
+    <ul class="seva-feats">
+      <li>Attendance</li><li>Payslips</li><li>Compliance</li><li>ESS portal</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya HRM + Payroll">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+
+  <div class="seva-carousel" data-carousel="hrm">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/a372ff/fff?text=HRM+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/6b42ff/fff?text=HRM+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/8357ff/fff?text=HRM+3"></div>
+
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">HRM Dashboard</div>
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+     7 — LEFT Slider | RIGHT Text
+====================================================== -->
+<section class="seva-row saptam reverse">
+  <div class="seva-carousel" data-carousel="billing">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/ffb27f/fff?text=Billing+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/ff8433/fff?text=Billing+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/ffa56a/fff?text=Billing+3"></div>
+
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">Billing System</div>
+  </div>
+
+  <div class="seva-text">
+    <span class="seva-num">07</span>
+    <h3 class="seva-title">Shvya Billing System</h3>
+    <p class="seva-summary">GST billing, reconciliation, refunds & reports.</p>
+    <ul class="seva-feats">
+      <li>Invoice</li><li>GST filing</li><li>Returns</li><li>Reports</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya Billing System">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ======================================================
+     8 — RIGHT Slider | LEFT Text
+====================================================== -->
+<section class="seva-row ashtam">
+  <div class="seva-text">
+    <span class="seva-num">08</span>
+    <h3 class="seva-title">Shvya Geofencing</h3>
+    <p class="seva-summary">Geo attendance & spoof-proof check-ins.</p>
+    <ul class="seva-feats">
+      <li>Geo boundaries</li><li>Anti-spoofing</li><li>Location logs</li><li>Mobile tracking</li>
+    </ul>
+    <div class="seva-actions">
+      <button class="seva-cta">Request Demo</button>
+      <button class="seva-highlight" data-view="Shvya Geofencing">VIEW HIGHLIGHTS</button>
+    </div>
+  </div>
+
+  <div class="seva-carousel" data-carousel="geo">
+    <div class="seva-slide active"><img src="https://via.placeholder.com/1200x720/6b534f/fff?text=Geo+1"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/433432/fff?text=Geo+2"></div>
+    <div class="seva-slide"><img src="https://via.placeholder.com/1200x720/7a5f5b/fff?text=Geo+3"></div>
+
+    <div class="arrow left">&lt;</div><div class="arrow right">&gt;</div>
+    <div class="dots"></div><div class="caption">Geofencing</div>
+  </div>
+</section>
+
+
+
+</div>
+
+
+
+<!-- ============= MODAL ============= -->
+<div class="seva-modal" id="seva-modal">
+  <div class="modal-card">
+    <h3 id="modal-title"></h3>
+    <ul id="modal-body"></ul>
+
+    <div class="modal-actions">
+      <button id="modal-close" style="background:#f1f5f9;">Close</button>
+      <button id="modal-cta" style="background:var(--accent);color:#fff;">Request Demo</button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+/* Reveal on Scroll */
+document.querySelectorAll('.seva-row').forEach(row=>{
+  const obs=new IntersectionObserver(e=>{
+    if(e[0].isIntersecting) row.classList.add('show');
+  },{threshold:0.2});
+  obs.observe(row);
+});
+
+/* Carousel */
+document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+  const slides=carousel.querySelectorAll('.seva-slide');
+  const dotsWrap=carousel.querySelector('.dots');
+  const left=carousel.querySelector('.arrow.left');
+  const right=carousel.querySelector('.arrow.right');
+  let index=0,timer;
+
+  slides.forEach((s,i)=>{
+    const d=document.createElement('div');
+    d.className='dot'+(i===0?' active':'');
+    d.onclick=()=>{index=i;update();pause();};
+    dotsWrap.appendChild(d);
+  });
+
+  const dots=dotsWrap.querySelectorAll('.dot');
+
+  const update=()=>{
+    slides.forEach((s,i)=>s.classList.toggle('active',i===index));
+    dots.forEach((d,i)=>d.classList.toggle('active',i===index));
+  };
+
+  const next=()=>{index=(index+1)%slides.length;update();};
+  const prev=()=>{index=(index-1+slides.length)%slides.length;update();};
+
+  const play=()=>timer=setInterval(next,3000);
+  const pause=()=>clearInterval(timer);
+
+  left.onclick=()=>{prev();pause();};
+  right.onclick=()=>{next();pause();};
+
+  carousel.onmouseenter=pause;
+  carousel.onmouseleave=play;
+
+  update();play();
+});
+
+/* Highlights Modal */
+const modal=document.getElementById('seva-modal');
+const modalTitle=document.getElementById('modal-title');
+const modalBody=document.getElementById('modal-body');
+const modalClose=document.getElementById('modal-close');
+
+const HIGHLIGHTS={
+  "Shvya CRM":["Lead scoring","Tickets","Chatbot","Campaign analytics"],
+  "Shvya Inventory":["Real-time stock","Barcode scan","Reorder alerts","Stock audits"],
+  "Shvya School ERP":["Attendance","Fees","LMS","Exams"],
+  "Shvya Hospital ERP":["EMR","Lab","OPD/IPD","Billing"],
+  "Shvya Restaurant ERP":["POS","KOT","Table mgmt","Menu"],
+  "Shvya HRM + Payroll":["Attendance","Payroll","Compliance","ESS"],
+  "Shvya Billing System":["Invoices","GST filing","Returns","Reports"],
+  "Shvya Geofencing":["Geo-fence","Anti-spoofing","Logs","Tracking"]
+};
+
+document.querySelectorAll('[data-view]').forEach(btn=>{
+  btn.onclick=()=>{
+    const key=btn.dataset.view;
+    modalTitle.textContent=key+" — Highlights";
+    modalBody.innerHTML=HIGHLIGHTS[key].map(i=>`<li>${i}</li>`).join("");
+    modal.classList.add('open');
+  };
+});
+modalClose.onclick=()=>modal.classList.remove('open');
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open');};
+</script>
+
+</section>

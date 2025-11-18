@@ -39,41 +39,57 @@
         </div>
         <!-- Spinner End -->
 
+ <!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 px-lg-5 py-3 py-lg-0">
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.html" class="navbar-brand p-0">
-                    <h1 class="display-6 text-primary m-0"><i class="fas fa-cubes me-3"></i>Shvya</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
-                        <a href="service.html" class="nav-item nav-link">Products</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="pricing.html" class="dropdown-item">Pricing</a>
-                                <a href="blog.html" class="dropdown-item">Blog</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-                    </div>
-                    <a href="#" class="btn btn-light border border-primary rounded-pill text-primary py-2 px-4 me-4">Log In</a>
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4">Book Demo</a>
+        <!-- Brand / Logo -->
+        <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+
+            <!-- Image Logo -->
+            <img src="img/logo.png" alt="Shvya AI Logo" 
+                 style="height:48px; width:auto;">
+
+            <!-- Text beside logo -->
+            <span style="
+                font-size:1.5rem;
+                font-weight:800;
+                font-family:'Plus Jakarta Sans', sans-serif;
+                color:#0ea5e9;
+                margin-left:10px;
+                letter-spacing:-0.7px;
+            ">
+                Shvya
+            </span>
+
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <!-- Navbar Menu -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="product.html" class="nav-item nav-link">Product</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
+               
+            <!-- Buttons -->
+            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4">
+                Book Demo
+            </a>
 
+        </div>
+
+    </nav>
+</div>
+<!-- Navbar End -->
 
          <!-- Header Start -->
          <div class="container-fluid bg-breadcrumb">
@@ -99,113 +115,758 @@
             </div>
         </div>
         <!-- Header End -->
+ <section class="bls-hero" aria-labelledby="bls-hero-heading" role="region">
+  <div class="bls-hero__text">
+    <h1 id="bls-hero-heading" class="bls-hero__title">Where Business Meets Clarity</h1>
+    <p class="bls-hero__subtitle">From complexity to control — this is our mission</p>
+  </div>
 
+  <div class="bls-hero__visual" aria-hidden="true">
+    <!-- SVG connector paths (subtle, scales with area) -->
+    <svg viewBox="0 0 600 240" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="bls-gLine" x1="0" x2="1">
+          <stop offset="0" stop-color="rgba(111,227,225,0.06)"/>
+          <stop offset="1" stop-color="rgba(255,255,255,0.03)"/>
+        </linearGradient>
+        <filter id="bls-fblur" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="blur"/>
+          <feBlend in="SourceGraphic" in2="blur"/>
+        </filter>
+      </defs>
 
-        <!-- About Start -->
-        <div class="container-fluid overflow-hidden py-5 mt-5">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="RotateMoveLeft">
-                            <img src="img/about-1.png" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <h4 class="mb-1 text-primary">About Us</h4>
-                        <h1 class="display-5 mb-4">Where business becomes effortless</h1>
-                        <p class="mb-4">Shvya is a single connected SaaS ecosystem built to replace the patchwork of apps with one source of truth. We connect CRM, HR, billing and operations so teams stop chasing processes and start scaling.</p>
-                        <a href="#" class="btn btn-primary rounded-pill py-3 px-5">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
+      <!-- gentle curved connectors -->
+      <path d="M50 160 C150 100, 250 100, 330 160" stroke="url(#bls-gLine)" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M330 160 C410 220, 520 220, 580 160" stroke="url(#bls-gLine)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    </svg>
 
-
-             <!-- FAQ Start -->
-        <div class="container-fluid FAQ bg-light overflow-hidden py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                       <div class="accordion" id="accordionExample">
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseTOne">
-                                        Why choose Shvya for operations and sales?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>One platform, less friction.</h5>
-                                        <p>Shvya replaces multiple point tools with a connected system so teams don’t lose data between apps. From lead capture to billing, Shvya keeps everything synced and auditable.</p>
-                                        <p>Automation rules, AI suggestions and role-based dashboards remove repetitive tasks and give leaders real-time control.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0 mb-4">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How does pricing work? 
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Transparent plans — scale as you grow.</h5>
-                                        <p>We offer tiered plans for startups through enterprise. Plans include feature bundles, user seats and optional add-ons for integrations and bespoke automations.</p>
-                                        <p>Contact sales for a tailored quote and an onboarding plan that aligns with your workflows.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item border-0">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed rounded-top" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Can Shvya handle industry-specific needs?
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body my-2">
-                                        <h5>Yes — out of the box modules available.</h5>
-                                        <p>Shvya includes pre-built modules for schools, hospitals, restaurants and retail. If your workflow is unique, we build custom automations and integrations to match it.</p>
-                                        <p>We also support multi-branch setups, local compliance (GST) and payroll rules for India.</p>
-                                    </div>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
-                        <div class="FAQ-img RotateMoveRight rounded">
-                            <img src="img/about-1.png" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- FAQ End -->
-
-<!-- CTA Page  -->
-       <section class="sales-banner">
-    <div class="sales-left">
-        <h2 class="sales-title">
-            Supercharge your 
-            <span class="sales-pill">Sales Revenue</span>
-            with us!
-        </h2>
-
-        <p class="sales-desc">
-            Discover how Kraya's AI-driven tools and consulting services
-            can skyrocket your revenue. Book a free consultation or demo today
-            and take the first step toward sales excellence.
-        </p>
-
-        <a href="#" class="sales-btn">Book A Free Demo</a>
+    <!-- Cubes: positions use inline style variables for quick tuning -->
+    <div tabindex="0" class="bls-hero__cube" data-label="crm"
+         style="left:28px; top:68px; --i:0;">
+      <div class="bls-hero__cube-top" aria-hidden="true"></div>
+      <div class="bls-hero__cube-face">CRM</div>
     </div>
 
-    <div class="sales-right">
-        <img src="img/illustration.png" alt="Revenue Illustration">
+    <div tabindex="0" class="bls-hero__cube" data-label="analytics"
+         style="left:150px; top:28px; --i:1;">
+      <div class="bls-hero__cube-top" aria-hidden="true"></div>
+      <div class="bls-hero__cube-face">AI</div>
     </div>
+
+    <div tabindex="0" class="bls-hero__cube" data-label="hr"
+         style="left:280px; top:44px; --i:2;">
+      <div class="bls-hero__cube-top" aria-hidden="true"></div>
+      <div class="bls-hero__cube-face">HR</div>
+    </div>
+
+    <div tabindex="0" class="bls-hero__cube" data-label="billing"
+         style="left:420px; top:82px; --i:3;">
+      <div class="bls-hero__cube-top" aria-hidden="true"></div>
+      <div class="bls-hero__cube-face">Billing</div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA Page  -->
+
+<!-- 22222222222222222222222222222222222222222 -->
+
+<!-- SECTION: Story card with callout + purpose -->
+<section class="dinesh-story-section" aria-label="Our Story: Built From Experience">
+  <style>
+    :root{
+      --page-bg:#f1f5f7;
+      --card-bg:#ffffff;
+      --muted:#586471;
+      --accent:#00c2b2;
+      --accent-2:#7ff0ea;
+      --callout-bg:#0f2b3d;
+      --callout-text:#e6f7ff;
+      --card-radius:20px;
+      --maxw:1100px;
+      --shadow: 0 18px 42px rgba(8,22,30,0.07);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* outer page spacing */
+    .dinesh-story-section {
+      background: var(--page-bg);
+      padding: 40px 18px;
+      display:flex;
+      justify-content:center;
+    }
+
+    /* card */
+    .dss__card {
+      width:100%;
+      max-width:var(--maxw);
+      background: linear-gradient(180deg, var(--card-bg) 0%, #fcfeff 100%);
+      border-radius:var(--card-radius);
+      padding:36px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:visible;
+      transition:transform .5s cubic-bezier(.2,.9,.2,1), box-shadow .3s ease;
+    }
+    @media (min-width:1200px){ .dss__card{ padding:48px 56px; } }
+
+    /* content layout */
+    .dss__grid {
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+    }
+    @media (max-width:900px){
+      .dss__grid{ grid-template-columns:1fr; }
+    }
+
+    /* left column */
+    .dss__left { position:relative; z-index:2; }
+    .dss__title {
+      margin:0 0 12px;
+      font-size: clamp(20px, 3.2vw, 28px);
+      font-weight:800;
+      color:#0f1724;
+      line-height:1.02;
+    }
+    .dss__p { margin:0 0 12px; color:var(--muted); font-size:15px; line-height:1.65; max-width:72ch; }
+
+    .dss__divider {
+      width:74px; height:8px; border-radius:8px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      margin:16px 0;
+      box-shadow:0 8px 20px rgba(0,194,178,0.07);
+    }
+
+    /* callout (right) */
+    .dss__callout-wrap { position:relative; display:flex; justify-content:flex-end; align-items:flex-start; }
+    .dss__callout {
+      background:var(--callout-bg);
+      color:var(--callout-text);
+      border-radius:14px;
+      width:320px;
+      padding:18px 18px;
+      box-shadow: 0 20px 44px rgba(6,18,30,0.22);
+      transform:translateY(0);
+      transition:transform .28s ease, box-shadow .28s ease;
+      position:relative;
+      margin-top:-8px;
+    }
+    .dss__callout .q { display:block; font-size:22px; color:var(--accent-2); margin-bottom:6px; }
+    .dss__callout p { margin:0 0 8px; font-size:14px; line-height:1.5; color:var(--callout-text); }
+    .dss__callout ul { margin:8px 0 0 18px; padding:0; color:var(--callout-text); font-size:14px; }
+    /* small rounded notch effect to match image */
+    .dss__callout::before {
+      content:"";
+      position:absolute;
+      left:-18px; top:18px;
+      width:18px; height:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:6px;
+      transform:rotate(8deg);
+      box-shadow: -8px 16px 24px rgba(2,10,20,0.06);
+      display:block;
+      opacity:0.08;
+    }
+
+    /* purpose area below */
+    .dss__purpose {
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+      margin-top:18px;
+      grid-column: 1 / -1; /* full width */
+    }
+    .dss__icon {
+      width:40px; height:40px; border-radius:10px;
+      background:linear-gradient(180deg, rgba(0,194,178,0.08), rgba(127,240,234,0.02));
+      display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:18px;
+      flex:0 0 40px;
+      margin-top:4px;
+    }
+    .dss__purpose .title { margin:0; font-weight:800; color:#0f1724; font-size:16px; }
+    .dss__purpose .desc { margin:6px 0 0; color:var(--muted); font-size:15px; line-height:1.5; }
+
+    /* small responsive tweaks */
+    @media (max-width:900px){
+      .dss__callout { width:100%; margin-top:0; }
+      .dss__grid { gap:20px; }
+      .dss__card { padding:24px; }
+    }
+
+    /* subtle entry animation */
+    .dss__card.is-mounted { transform: translateY(-6px); box-shadow: 0 26px 64px rgba(6,20,30,0.12); }
+    .dss__callout.is-hover { transform: translateY(-8px); box-shadow: 0 26px 60px rgba(2,10,20,0.28); }
+
+    /* accessibility focus */
+    .dss__callout:focus { outline:3px solid rgba(0,194,178,0.12); outline-offset:6px }
+  </style>
+
+  <div class="dss__card" id="dssCard" role="region" aria-labelledby="dssHeading">
+    <div class="dss__grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="dss__left">
+        <h2 id="dssHeading" class="dss__title">Our Story: Built From Experience</h2>
+
+        <p class="dss__p">
+          Every business begins in ambition. But as it grows, so do challenges — untracked tasks,
+          delayed reports, and a stack of tools that promise ease but add confusion.
+        </p>
+
+        <div class="dss__divider" aria-hidden="true"></div>
+
+        <p class="dss__p">
+          And we built Shyva to fix that — to bring every part of your business under one clear,
+          intelligent system.
+        </p>
+
+        <!-- PURPOSE (spans full width below card columns) -->
+        <div class="dss__purpose" aria-hidden="false">
+          <div class="dss__icon" aria-hidden="true">💡</div>
+          <div>
+            <div class="title">Our Purpose</div>
+            <div class="desc">
+              We exist to simplify how businesses work — to remove daily <strong style="color:var(--accent)">chaos</strong>
+              and replace it with <strong style="color:var(--accent)">clarity, connection, and control</strong>.
+              Because business growth should feel fluid, not frustrating.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT CALL OUT -->
+      <div class="dss__callout-wrap" aria-hidden="true">
+        <aside class="dss__callout" id="dssCallout" tabindex="0">
+          <span class="q">“</span>
+          <p>At Shyva, we saw one truth: Businesses fail because of disconnection.</p>
+          <ul>
+            <li>Disconnected tools.</li>
+            <li>Disconnected data.</li>
+            <li>Disconnected teams.</li>
+          </ul>
+        </aside>
+      </div>
+
+    </div> <!-- grid -->
+  </div> <!-- card -->
+
+  <script>
+    // small JS for mount animation and subtle parallax on the callout
+    (function(){
+      const card = document.getElementById('dssCard');
+      const callout = document.getElementById('dssCallout');
+
+      // entry mount effect
+      requestAnimationFrame(() => {
+        setTimeout(() => card.classList.add('is-mounted'), 80);
+      });
+
+      // subtle parallax on pointer move inside card (disabled on touch)
+      const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+      if (!isTouch) {
+        card.addEventListener('pointermove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const cx = rect.left + rect.width/2;
+          const cy = rect.top + rect.height/2;
+          const dx = (e.clientX - cx) / rect.width;
+          const dy = (e.clientY - cy) / rect.height;
+
+          // move callout slightly based on pointer
+          const moveX = Math.max(Math.min(dx * 12, 12), -12);
+          const moveY = Math.max(Math.min(dy * 8, 8), -8);
+          callout.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+
+        card.addEventListener('pointerenter', () => callout.classList.add('is-hover'));
+        card.addEventListener('pointerleave', () => {
+          callout.classList.remove('is-hover');
+          callout.style.transform = '';
+        });
+      }
+
+      // make callout focusable and keyboard friendly
+      callout.addEventListener('focus', () => callout.classList.add('is-hover'));
+      callout.addEventListener('blur', () => callout.classList.remove('is-hover'));
+    })();
+  </script>
+</section>
+
+
+<!-- 33333333333333333333333333333333333333333333333333333333333333 -->
+
+<section class="dinesh-three-cards" aria-label="Vision Mission Values cards">
+  <style>
+    :root{
+      --bg:#f3f7f8;
+      --card-bg:#ffffff;
+      --accent:#00c2b2;
+      --muted:#54616a;
+      --title-color:#0f2b3a;
+      --shadow-1: 0 18px 40px rgba(10,28,40,0.06);
+      --shadow-2: 8px 8px 0 rgba(8,34,59,0.06);
+      --radius:22px;
+      --maxw:1200px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    .dinesh-three-cards{
+      background: var(--bg);
+      padding: 48px 20px;
+      display:flex;
+      justify-content:center;
+    }
+
+    /* subtle grid background like the reference image */
+    .dinesh-three-cards::before{
+      content:"";
+      position:absolute;
+      left:0; right:0; top:0; bottom:0;
+      pointer-events:none;
+      background-image:
+        radial-gradient(circle at 2px 2px, rgba(0,194,178,0.06) 0px, transparent 1px),
+        linear-gradient(transparent 0, transparent 24px, rgba(0,0,0,0.0) 24px);
+      background-size: 36px 36px, 100% 36px;
+      opacity:0.06;
+      z-index:0;
+    }
+
+    .d3c__wrap{
+      width:100%;
+      max-width:var(--maxw);
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:28px;
+      position:relative;
+      z-index:1;
+    }
+
+    @media (max-width:980px){
+      .d3c__wrap{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width:640px){
+      .d3c__wrap{ grid-template-columns: 1fr; }
+    }
+
+    /* card base */
+    .d3c__card{
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding:28px 26px;
+      position:relative;
+      box-shadow: var(--shadow-1);
+      overflow:visible;
+      transition: transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s ease;
+      min-height: 380px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* lifted edge (dark offset) to the lower-right */
+    .d3c__card::after{
+      content:"";
+      position:absolute;
+      right:8px; bottom:10px;
+      width:calc(100% - 8px);
+      height:calc(100% - 10px);
+      border-radius:var(--radius);
+      z-index:-1;
+      background: linear-gradient(180deg, rgba(8,34,59,0.03), rgba(8,34,59,0.06));
+      transform:translate(8px,10px);
+      filter: blur(0.6px);
+      opacity:0.9;
+      pointer-events:none;
+    }
+
+    .d3c__card:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 28px 70px rgba(10,28,40,0.10);
+    }
+
+    /* Title + underline */
+    .d3c__title{
+      font-size: clamp(20px,2.6vw,28px);
+      font-weight:800;
+      color:var(--title-color);
+      margin:0 0 12px;
+    }
+    .d3c__underline{
+      width:68px;
+      height:6px;
+      border-radius:6px;
+      background:linear-gradient(90deg,var(--accent), rgba(127,240,234,0.6));
+      margin-bottom:14px;
+      box-shadow: 0 8px 18px rgba(0,194,178,0.06);
+    }
+
+    /* body text */
+    .d3c__text{
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      margin-bottom:18px;
+      max-width:44ch;
+    }
+
+    /* list / bullets area */
+    .d3c__list{
+      margin-top:12px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-bottom: auto; /* push purpose to bottom */
+    }
+
+    .d3c__check{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .d3c__check .dot{
+      width:18px; height:18px; border-radius:50%; background:var(--accent); color:white; display:inline-grid; place-items:center; font-size:12px; flex:0 0 18px;
+      box-shadow:0 6px 18px rgba(0,194,178,0.12);
+      margin-top:4px;
+    }
+    .d3c__check p{ margin:0; color:var(--muted); font-size:14px; line-height:1.5; }
+
+    /* numbered badges for a card (right one in reference) */
+    .d3c__numlist{ display:flex; flex-direction:column; gap:16px; margin-top:8px; }
+    .d3c__num{
+      display:flex; gap:14px; align-items:center;
+    }
+    .d3c__num .badge{
+      width:42px; height:42px; border-radius:50%; background: linear-gradient(180deg,var(--accent),var(--accent-2)); color:white; display:grid; place-items:center; font-weight:800; box-shadow: 0 10px 30px rgba(0,194,178,0.12); flex:0 0 42px;
+    }
+    .d3c__num .desc{ font-weight:700; color:var(--title-color); font-size:15px; }
+    .d3c__num small{ display:block; color:var(--muted); font-weight:500; font-size:13px; margin-top:4px }
+
+    /* footer / emphasis */
+    .d3c__cta{
+      margin-top:22px;
+      color:var(--accent);
+      font-weight:800;
+      font-size:16px;
+    }
+
+    /* keyboard + focus */
+    .d3c__card:focus-within, .d3c__card:focus { outline: 3px solid rgba(0,194,178,0.08); outline-offset:6px; transform: translateY(-8px); }
+    .d3c__card button{ border:0; background:transparent; cursor:pointer; }
+
+    /* smaller cards on mobile: reduce heights */
+    @media (max-width:640px){
+      .d3c__card{ min-height: auto; padding:22px; }
+      .d3c__underline{ width:56px; height:5px; }
+    }
+  </style>
+
+  <div class="d3c__wrap" role="list">
+
+    <!-- Card 1: Vision -->
+    <article class="d3c__card" role="listitem" tabindex="0" aria-labelledby="c1title">
+      <h3 id="c1title" class="d3c__title">Our Vision</h3>
+      <div class="d3c__underline" aria-hidden="true"></div>
+
+      <p class="d3c__text">
+        To empower every business — from startups to enterprises — with systems and intelligence
+        they need to scale faster, serve better, and operate smarter.
+      </p>
+
+      <div class="d3c__list" aria-hidden="false">
+        <div class="d3c__check">
+          <div class="dot">✓</div>
+          <p>Founders focus on strategy, not spreadsheets. Teams focus on customers, not admin.</p>
+        </div>
+
+        <div class="d3c__check">
+          <div class="dot">✓</div>
+          <p>Data to drive decisions, not confusion.</p>
+        </div>
+      </div>
+
+      <div class="d3c__cta">In short: make business <span style="color:var(--accent)">effortless</span></div>
+    </article>
+
+    <!-- Card 2: Mission -->
+    <article class="d3c__card" role="listitem" tabindex="0" aria-labelledby="c2title">
+      <h3 id="c2title" class="d3c__title">Our Mission</h3>
+      <div class="d3c__underline" aria-hidden="true"></div>
+
+      <p class="d3c__text">
+        To build a world-class SaaS ecosystem that gives every business — regardless of size or industry —
+        access to enterprise-grade technology at an affordable cost.
+      </p>
+
+      <div class="d3c__numlist" aria-hidden="false">
+        <div class="d3c__num">
+          <div class="badge">1</div>
+          <div>
+            <div class="desc">Simplicity</div>
+            <small>Good systems should reduce manual work.</small>
+          </div>
+        </div>
+
+        <div class="d3c__num">
+          <div class="badge">2</div>
+          <div>
+            <div class="desc">Integration</div>
+            <small>Everything should work together, not apart.</small>
+          </div>
+        </div>
+
+        <div class="d3c__num">
+          <div class="badge">3</div>
+          <div>
+            <div class="desc">Impact</div>
+            <small>Every action should save time, effort and energy.</small>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- Card 3: Values (or short) -->
+    <article class="d3c__card" role="listitem" tabindex="0" aria-labelledby="c3title">
+      <h3 id="c3title" class="d3c__title">Our Values</h3>
+      <div class="d3c__underline" aria-hidden="true"></div>
+
+      <p class="d3c__text">
+        We believe in clear ownership, meaningful automation, and designing products that humans enjoy using.
+        Our work reduces friction and amplifies impact.
+      </p>
+
+      <div class="d3c__list" aria-hidden="false">
+        <div class="d3c__check">
+          <div class="dot">✓</div>
+          <p>Customer-first decisions</p>
+        </div>
+
+        <div class="d3c__check">
+          <div class="dot">✓</div>
+          <p>Data-driven empathy</p>
+        </div>
+
+        <div class="d3c__check">
+          <div class="dot">✓</div>
+          <p>Think big, build small, iterate fast</p>
+        </div>
+      </div>
+
+      <div class="d3c__cta">Ready to simplify business?</div>
+    </article>
+
+  </div>
+
+  <script>
+    // small JS: keyboard left/right to move focus between cards for accessibility
+    (function(){
+      const cards = Array.from(document.querySelectorAll('.d3c__card'));
+      cards.forEach((card, i) => {
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const next = cards[(i+1) % cards.length];
+            next.focus();
+          } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prev = cards[(i-1 + cards.length) % cards.length];
+            prev.focus();
+          }
+        });
+      });
+    })();
+  </script>
+</section>
+
+<!-- 4444444444444444444444444444444444444444444444444444444444444444444444 -->
+
+
+
+<!-- 5555555555555555555555555555555555555555555555555555555555555555555555555555 -->
+
+<section class="shvya-different" aria-labelledby="diff-title">
+  <div class="container">
+    <h2 id="diff-title" class="title">What Makes Shvya Different</h2>
+    <p class="subtitle">The urska re souibs in simyoen to justle ld the pospundus.</p>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z" stroke-width="1.5" fill="none"></path></svg>
+        </div>
+        <h3>Built for Real Business Pain</h3>
+        <p>Our features solve daily frustrations, not just add "tech talk".</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 1 0 20A10 10 0 0 1 12 2z" stroke-width="1.5" fill="none"></path></svg>
+        </div>
+        <h3>Made in India, for the World</h3>
+        <p>Designed with local compliance and global standards.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l9 4-9 4-9-4 9-4z" stroke-width="1.5" fill="none"></path></svg>
+        </div>
+        <h3>No Overpromises, Just Outcomes</h3>
+        <p>Every product delivers what it says — stability, simplicity, and speed.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="1.5" fill="none"></circle></svg>
+        </div>
+        <h3>Founder-Led Focus</h3>
+        <p>Created by people who understand operations, not just code.</p>
+      </div>
+
+      <div class="card wide">
+        <div class="icon-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h16" stroke-width="1.5" fill="none"></path></svg>
+        </div>
+        <h3>Scalable & Secure</h3>
+        <p>Because your business deserves to grow without limits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root{
+    --text:#0f172a;
+    --muted:#64748b;
+    --accent:#0ea5a5;
+    --card-bg:#f0fbff;
+    --radius:16px;
+  }
+  .shvya-different{padding:50px 20px;background:#f8fafc;border-radius:20px;max-width:1000px;margin:40px auto;}
+  .shvya-different .title{font-size:32px;font-weight:700;margin-bottom:6px;color:var(--text);} 
+  .shvya-different .subtitle{color:var(--muted);margin-bottom:32px;font-size:14px;}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .card{background:var(--card-bg);padding:22px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);} 
+  .card.wide{grid-column:span 2;} 
+  .icon-wrap{width:46px;height:46px;border-radius:10px;background:white;display:grid;place-items:center;border:1px solid rgba(0,0,0,0.07);} 
+  .icon{width:22px;height:22px;stroke:var(--accent);} 
+  .card h3{margin:12px 0 6px;font-size:17px;font-weight:700;} 
+  .card p{margin:0;color:var(--muted);font-size:14px;} 
+  @media(max-width:640px){.grid{grid-template-columns:1fr;} .card.wide{grid-column:span 1;} }
+</style>
+
+<!-- 666666666666666666666666666666666666666666666666666666666666666666666666666666666666 -->
+<section class="promo__section">
+  <div class="promo__card">
+    <h2 class="promo__title">Let’s Build Your Business Ecosystem — Together</h2>
+    <p class="promo__desc">
+      Whether you're struggling to manage leads, employees, or operations — Shvya is your growth system.
+      Let's simplify your business, one at a time.
+    </p>
+
+    <a href="#" class="promo__btn promo__btn--primary">
+      <span class="promo__icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="white" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </span>
+      Book Free Consultation or Demo Today
+      <span class="promo__arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .promo__section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .promo__card {
+    background: #0b4a8f;
+    color: #fff;
+    padding: 50px 40px;
+    border-radius: 22px;
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  }
+
+  /* animated star background */
+  .promo__card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 3px) 0 0,
+                radial-gradient(circle, rgba(255,255,255,0.5) 1.5px, transparent 3px) 50px 80px,
+                radial-gradient(circle, rgba(255,255,255,0.6) 1.8px, transparent 3px) 120px 200px,
+                radial-gradient(circle, rgba(255,255,255,0.4) 1.2px, transparent 3px) 200px 40px,
+                radial-gradient(circle, rgba(255,255,255,0.65) 1.6px, transparent 3px) 300px 150px;
+    background-size: 400px 400px;
+    animation: promoStarsFloat 18s linear infinite;
+    opacity: 0.25;
+  }
+
+  @keyframes promoStarsFloat {
+    0% {
+      background-position: 0 0, 50px 80px, 120px 200px, 200px 40px, 300px 150px;
+    }
+    100% {
+      background-position: 400px 400px, 450px 480px, 520px 600px, 600px 440px, 700px 550px;
+    }
+  }
+
+  .promo__title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    position: relative;
+  }
+
+  .promo__desc {
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 28px;
+    position: relative;
+    opacity: 0.95;
+  }
+
+  .promo__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .promo__btn--primary {
+    background: #ff5c3b;
+    color: white;
+  }
+
+  .promo__btn--primary:hover {
+    background: #ff694d;
+  }
+
+  .promo__icon { display: flex; }
+
+  .promo__arrow {
+    font-size: 18px;
+    margin-left: 4px;
+  }
+
+  @media(max-width: 640px){
+    .promo__title { font-size: 26px; }
+    .promo__card { padding: 36px 22px; }
+  }
+</style>
+
+<!-- 7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777 -->
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
@@ -263,184 +924,6 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-<!-- === Live WhatsApp Sales Popup (All-in-one Code with Your Number) === -->
-<style>
-  /* Floating WhatsApp Button */
-  .wa-float {
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    width: 64px;
-    height: 64px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,.22);
-    z-index: 9999;
-    text-decoration: none;
-    transition: transform .18s ease;
-  }
-  .wa-float:hover { transform: scale(1.08); }
-  .wa-float img { width:36px; height:36px; }
-
-  /* Ring effect */
-  .wa-ring {
-    position:absolute;
-    width:86px; height:86px; border-radius:50%;
-    right: -11px; bottom: -11px; z-index: -1;
-    pointer-events:none;
-    animation: ringPulse 2.6s infinite ease-out;
-    box-shadow: 0 0 0 6px rgba(37,211,102,.06), 0 0 30px 6px rgba(37,211,102,.04) inset;
-  }
-  @keyframes ringPulse {
-    0% { transform: scale(.7); opacity: .95 }
-    70% { transform: scale(1.6); opacity: 0 }
-    100% { opacity: 0 }
-  }
-
-  /* Popup card */
-  .sales-popup {
-    position: fixed;
-    right: 94px;
-    bottom: 26px;
-    width: 320px;
-    max-width: calc(100% - 140px);
-    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,248,255,0.98));
-    border-radius: 14px;
-    box-shadow: 0 22px 50px rgba(15,23,42,0.18);
-    padding: 14px;
-    z-index: 9998;
-    transform-origin: bottom right;
-    transition: transform .28s cubic-bezier(.2,.9,.2,1), opacity .2s;
-    opacity: 0;
-    visibility: hidden;
-  }
-  .sales-popup.show { opacity: 1; visibility: visible; transform: translateY(0) scale(1); }
-  .sales-popup.hide { opacity: 0; transform: translateY(10px) scale(.98); }
-  .sales-popup.anim-in { animation: popIn .36s cubic-bezier(.2,.9,.2,1); }
-
-  @keyframes popIn {
-    0% { transform: translateY(14px) scale(.98); opacity:0; }
-    60% { transform: translateY(-8px) scale(1.01); opacity:1; }
-    100% { transform: translateY(0) scale(1); }
-  }
-
-  .sales-popup .head { display:flex; gap:10px; align-items:center; }
-  .sales-popup .avatar {
-    width:44px; height:44px; border-radius:10px;
-    background: linear-gradient(90deg,#fff,#eef6ff);
-    display:flex; align-items:center; justify-content:center;
-    box-shadow: inset 0 6px 12px rgba(16,24,40,0.04);
-    font-weight:700; color:#0f172a;
-  }
-  .sales-popup h4 { margin:0; font-size:15px; }
-  .sales-popup p { margin:6px 0 0; font-size:13px; color:#55607a; }
-
-  .sales-popup .ctas { display:flex; gap:8px; margin-top:12px; }
-  .btn {
-    padding:8px 12px; border-radius:10px; border:0;
-    cursor:pointer; font-weight:600; text-decoration:none;
-    font-size:13px; display:inline-flex; align-items:center;
-  }
-  .btn-primary { background:#25D366; color:#fff; }
-  .btn-outline { background:transparent; border:1px solid rgba(15,23,42,0.06); color:#374151; }
-
-  .sales-popup .close {
-    position:absolute; right:10px; top:8px; background:transparent;
-    border:0; cursor:pointer; font-size:14px; color:#6b7280;
-  }
-
-  .sales-popup .meta-note {
-    margin-top:10px; font-size:12px; color:#8b95a8;
-    display:flex; align-items:center; gap:8px;
-  }
-
-  @media (max-width:640px) {
-    .sales-popup { right: 14px; left: 14px; width:auto; bottom: 86px; }
-    .wa-float { right: 14px; bottom: 14px; }
-  }
-</style>
-
-<!-- WhatsApp Floating Button -->
-<a class="wa-float" id="waFloat" href="https://wa.me/916393413211?text=Hi%20I%20want%20to%20know%20more%20about%20your%20product" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png">
-  <div class="wa-ring" id="waRing"></div>
-</a>
-
-<!-- Sales Popup -->
-<div class="sales-popup" id="salesPopup">
-  <button class="close" id="salesClose">✕</button>
-  <div class="head">
-    <div class="avatar">Shvya-Ai</div>
-    <div class="meta">
-      <h4>Live Sales Support</h4>
-      <p>Chat with us or book a demo call.</p>
-    </div>
-  </div>
-
-  <div class="ctas">
-    <a href="https://wa.me/916393413211?text=Hi%20I%20am%20interested%20in%20your%20SaaS%20platform" class="btn btn-primary" id="chatBtn" target="_blank">Chat on WhatsApp</a>
-    <a href="bookcall.html" class="btn btn-outline" id="bookBtn" target="_blank">Book a Demo</a>
-  </div>
-
-  <div class="meta-note">
-    <input type="checkbox" id="dontShow"> <span>Don't show again</span>
-  </div>
-</div>
-
-<script>
-(function(){
-  const OPEN_DELAY = 3000;
-  const REOPEN_INTERVAL = 15000;
-
-  const popup = document.getElementById('salesPopup');
-  const closeBtn = document.getElementById('salesClose');
-  const dontShow = document.getElementById('dontShow');
-
-  const chatBtn = document.getElementById('chatBtn');
-  const bookBtn = document.getElementById('bookBtn');
-
-  let reopenTimer = null;
-  let popupOpen = false;
-
-  function showPopup() {
-    if (dontShow.checked) return;
-    popup.classList.add('show','anim-in');
-    popupOpen = true;
-  }
-
-  function hidePopup() {
-    popup.classList.remove('show','anim-in');
-    popupOpen = false;
-  }
-
-  function scheduleReopen() {
-    clearInterval(reopenTimer);
-    reopenTimer = setInterval(() => {
-      if (!popupOpen && !dontShow.checked) showPopup();
-    }, REOPEN_INTERVAL);
-  }
-
-  closeBtn.addEventListener('click', hidePopup);
-  [chatBtn, bookBtn].forEach(btn => {
-    btn.addEventListener('click', () => {
-      clearInterval(reopenTimer);
-    });
-  });
-
-  setTimeout(() => {
-    showPopup();
-    scheduleReopen();
-  }, OPEN_DELAY);
-
-})();
-</script>
-
-<!-- Whatsaap End  -->
-        
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
